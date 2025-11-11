@@ -52,6 +52,7 @@
             // 
             this.mnuMainManu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
             this.mnuMainManu.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuMainManu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuMainManu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuMainManu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuMember,
@@ -60,8 +61,8 @@
             this.mnuMainManu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.mnuMainManu.Location = new System.Drawing.Point(0, 0);
             this.mnuMainManu.Name = "mnuMainManu";
-            this.mnuMainManu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuMainManu.Size = new System.Drawing.Size(1179, 33);
+            this.mnuMainManu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mnuMainManu.Size = new System.Drawing.Size(884, 45);
             this.mnuMainManu.TabIndex = 1;
             this.mnuMainManu.Text = "Manu";
             // 
@@ -74,27 +75,27 @@
             this.mnuMember.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuMember.Name = "mnuMember";
             this.mnuMember.Padding = new System.Windows.Forms.Padding(4, 0, 60, 0);
-            this.mnuMember.Size = new System.Drawing.Size(175, 29);
+            this.mnuMember.Size = new System.Drawing.Size(209, 41);
             this.mnuMember.Text = "Member";
             // 
             // mnuAddMember
             // 
             this.mnuAddMember.Name = "mnuAddMember";
-            this.mnuAddMember.Size = new System.Drawing.Size(307, 30);
+            this.mnuAddMember.Size = new System.Drawing.Size(417, 46);
             this.mnuAddMember.Text = "Register Member";
             this.mnuAddMember.Click += new System.EventHandler(this.mnuAddMember_Click);
             // 
             // mnuUpdateMember
             // 
             this.mnuUpdateMember.Name = "mnuUpdateMember";
-            this.mnuUpdateMember.Size = new System.Drawing.Size(307, 30);
+            this.mnuUpdateMember.Size = new System.Drawing.Size(417, 46);
             this.mnuUpdateMember.Text = "Update Member";
             this.mnuUpdateMember.Click += new System.EventHandler(this.mnuUpdateMember_Click);
             // 
             // mnuDeregisterMember
             // 
             this.mnuDeregisterMember.Name = "mnuDeregisterMember";
-            this.mnuDeregisterMember.Size = new System.Drawing.Size(307, 30);
+            this.mnuDeregisterMember.Size = new System.Drawing.Size(417, 46);
             this.mnuDeregisterMember.Text = "Deregister Member";
             this.mnuDeregisterMember.Click += new System.EventHandler(this.mnuDeregisterMember_Click);
             // 
@@ -107,27 +108,29 @@
             this.mnuBook.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuBook.Name = "mnuBook";
             this.mnuBook.Padding = new System.Windows.Forms.Padding(4, 0, 60, 0);
-            this.mnuBook.Size = new System.Drawing.Size(132, 29);
+            this.mnuBook.Size = new System.Drawing.Size(157, 41);
             this.mnuBook.Text = "Book";
             // 
             // mnuAddBook
             // 
             this.mnuAddBook.Name = "mnuAddBook";
-            this.mnuAddBook.Size = new System.Drawing.Size(246, 30);
+            this.mnuAddBook.Size = new System.Drawing.Size(340, 46);
             this.mnuAddBook.Text = "Add Book";
             this.mnuAddBook.Click += new System.EventHandler(this.mnuAddBook_Click);
             // 
             // mnuUpdateBook
             // 
             this.mnuUpdateBook.Name = "mnuUpdateBook";
-            this.mnuUpdateBook.Size = new System.Drawing.Size(246, 30);
+            this.mnuUpdateBook.Size = new System.Drawing.Size(340, 46);
             this.mnuUpdateBook.Text = "Update Book";
+            this.mnuUpdateBook.Click += new System.EventHandler(this.mnuUpdateBook_Click);
             // 
             // mnuRemoveBook
             // 
             this.mnuRemoveBook.Name = "mnuRemoveBook";
-            this.mnuRemoveBook.Size = new System.Drawing.Size(246, 30);
+            this.mnuRemoveBook.Size = new System.Drawing.Size(340, 46);
             this.mnuRemoveBook.Text = "Remove Book";
+            this.mnuRemoveBook.Click += new System.EventHandler(this.mnuRemoveBook_Click);
             // 
             // mnuLoan
             // 
@@ -138,25 +141,26 @@
             this.mnuLoan.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuLoan.Name = "mnuLoan";
             this.mnuLoan.Padding = new System.Windows.Forms.Padding(4, 0, 60, 0);
-            this.mnuLoan.Size = new System.Drawing.Size(132, 29);
+            this.mnuLoan.Size = new System.Drawing.Size(157, 41);
             this.mnuLoan.Text = "Loan";
             // 
             // mnuReserveBook
             // 
             this.mnuReserveBook.Name = "mnuReserveBook";
-            this.mnuReserveBook.Size = new System.Drawing.Size(240, 30);
+            this.mnuReserveBook.Size = new System.Drawing.Size(332, 46);
             this.mnuReserveBook.Text = "Reserve Book";
+            this.mnuReserveBook.Click += new System.EventHandler(this.mnuReserveBook_Click);
             // 
             // mnuCollectBook
             // 
             this.mnuCollectBook.Name = "mnuCollectBook";
-            this.mnuCollectBook.Size = new System.Drawing.Size(240, 30);
+            this.mnuCollectBook.Size = new System.Drawing.Size(332, 46);
             this.mnuCollectBook.Text = "Collect Book";
             // 
             // mnuReturnBook
             // 
             this.mnuReturnBook.Name = "mnuReturnBook";
-            this.mnuReturnBook.Size = new System.Drawing.Size(240, 30);
+            this.mnuReturnBook.Size = new System.Drawing.Size(332, 46);
             this.mnuReturnBook.Text = "Return Book";
             // 
             // munExit
@@ -164,11 +168,10 @@
             this.munExit.AutoSize = true;
             this.munExit.BackColor = System.Drawing.Color.SeaGreen;
             this.munExit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.munExit.Location = new System.Drawing.Point(1104, 2);
-            this.munExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.munExit.Location = new System.Drawing.Point(828, 2);
             this.munExit.Name = "munExit";
-            this.munExit.Padding = new System.Windows.Forms.Padding(13, 2, 13, 2);
-            this.munExit.Size = new System.Drawing.Size(75, 31);
+            this.munExit.Padding = new System.Windows.Forms.Padding(10, 2, 10, 2);
+            this.munExit.Size = new System.Drawing.Size(88, 44);
             this.munExit.TabIndex = 14;
             this.munExit.Text = "Exit";
             this.munExit.Click += new System.EventHandler(this.munExit_Click);
@@ -177,24 +180,22 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::LibrarySYS.Properties.Resources.Library;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 33);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1179, 657);
+            this.pictureBox1.Size = new System.Drawing.Size(884, 516);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 690);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.munExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mnuMainManu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

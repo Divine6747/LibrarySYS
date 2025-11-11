@@ -4,25 +4,25 @@ using System.Windows.Forms;
 
 namespace LibrarySYS
 {
-    public partial class frmAddBook : Form
+    public partial class frmRemoveBook : Form
     {
         frmMainMenu parent;
-        public frmAddBook()
+        public frmRemoveBook()
         {
             InitializeComponent();
             this.parent = new frmMainMenu();
         }
 
-        public frmAddBook(frmMainMenu parent)
+        public frmRemoveBook(frmMainMenu parent)
         {        
             this.parent = parent;
         }
 
-        private void mnuAddBookBack_Click(object sender, EventArgs e)
+        private void mnuBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmMainMenu frmMainMenu = new frmMainMenu();
-            frmMainMenu.Show();
+            frmMainMenu parent = new frmMainMenu();
+            parent.Show();
         }
     }
 }

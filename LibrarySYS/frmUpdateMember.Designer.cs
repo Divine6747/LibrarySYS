@@ -42,9 +42,9 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.lblEircode = new System.Windows.Forms.Label();
-            this.btnUpdateRegisteredMemberSearch = new System.Windows.Forms.Button();
+            this.btMemberSearch = new System.Windows.Forms.Button();
             this.lblUpdateMemerID = new System.Windows.Forms.Label();
-            this.txtSearchUpdateMemberID = new System.Windows.Forms.TextBox();
+            this.txtSearchMemberID = new System.Windows.Forms.TextBox();
             this.pnlUpdateRegisteredMember = new System.Windows.Forms.Panel();
             this.mnuBackStrip.SuspendLayout();
             this.grpUpdateRegisteredMember.SuspendLayout();
@@ -58,20 +58,21 @@
             this.mnuUpdateMemberBack.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuUpdateMemberBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuUpdateMemberBack.Name = "mnuUpdateMemberBack";
-            this.mnuUpdateMemberBack.Size = new System.Drawing.Size(89, 31);
+            this.mnuUpdateMemberBack.Size = new System.Drawing.Size(124, 44);
             this.mnuUpdateMemberBack.Text = "BACK";
             this.mnuUpdateMemberBack.Click += new System.EventHandler(this.mnuUpdateMemberBack_Click_1);
             // 
             // mnuBackStrip
             // 
             this.mnuBackStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.mnuBackStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuBackStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuBackStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuUpdateMemberBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(995, 43);
+            this.mnuBackStrip.Size = new System.Drawing.Size(995, 56);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -82,7 +83,7 @@
             this.lblUpdateRegisterMember.Location = new System.Drawing.Point(27, 56);
             this.lblUpdateRegisterMember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUpdateRegisterMember.Name = "lblUpdateRegisterMember";
-            this.lblUpdateRegisterMember.Size = new System.Drawing.Size(383, 33);
+            this.lblUpdateRegisterMember.Size = new System.Drawing.Size(512, 44);
             this.lblUpdateRegisterMember.TabIndex = 85;
             this.lblUpdateRegisterMember.Text = "Update Registered Member";
             // 
@@ -114,7 +115,6 @@
             this.btnUpdateRegisterMemberSubmit.TabIndex = 93;
             this.btnUpdateRegisterMemberSubmit.Text = "SUBMIT";
             this.btnUpdateRegisterMemberSubmit.UseVisualStyleBackColor = false;
-            this.btnUpdateRegisterMemberSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPhone
             // 
@@ -124,7 +124,7 @@
             this.txtPhone.Location = new System.Drawing.Point(35, 213);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(291, 32);
+            this.txtPhone.Size = new System.Drawing.Size(291, 42);
             this.txtPhone.TabIndex = 88;
             // 
             // lblPhone
@@ -133,7 +133,7 @@
             this.lblPhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(35, 184);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(72, 23);
+            this.lblPhone.Size = new System.Drawing.Size(102, 34);
             this.lblPhone.TabIndex = 92;
             this.lblPhone.Text = "Phone";
             // 
@@ -145,7 +145,7 @@
             this.txtForename.Location = new System.Drawing.Point(35, 90);
             this.txtForename.MaxLength = 20;
             this.txtForename.Name = "txtForename";
-            this.txtForename.Size = new System.Drawing.Size(291, 32);
+            this.txtForename.Size = new System.Drawing.Size(291, 42);
             this.txtForename.TabIndex = 85;
             // 
             // lblForename
@@ -154,7 +154,7 @@
             this.lblForename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForename.Location = new System.Drawing.Point(35, 61);
             this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(110, 23);
+            this.lblForename.Size = new System.Drawing.Size(153, 34);
             this.lblForename.TabIndex = 91;
             this.lblForename.Text = "Forename";
             // 
@@ -166,7 +166,7 @@
             this.txtSurname.Location = new System.Drawing.Point(573, 90);
             this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(291, 32);
+            this.txtSurname.Size = new System.Drawing.Size(291, 42);
             this.txtSurname.TabIndex = 86;
             // 
             // lblSurname
@@ -175,7 +175,7 @@
             this.lblSurname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.Location = new System.Drawing.Point(573, 61);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(96, 23);
+            this.lblSurname.Size = new System.Drawing.Size(134, 34);
             this.lblSurname.TabIndex = 90;
             this.lblSurname.Text = "Surname";
             // 
@@ -187,7 +187,7 @@
             this.txtEircode.Location = new System.Drawing.Point(573, 213);
             this.txtEircode.MaxLength = 7;
             this.txtEircode.Name = "txtEircode";
-            this.txtEircode.Size = new System.Drawing.Size(291, 32);
+            this.txtEircode.Size = new System.Drawing.Size(291, 42);
             this.txtEircode.TabIndex = 87;
             // 
             // lblEircode
@@ -196,20 +196,20 @@
             this.lblEircode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEircode.Location = new System.Drawing.Point(573, 184);
             this.lblEircode.Name = "lblEircode";
-            this.lblEircode.Size = new System.Drawing.Size(88, 23);
+            this.lblEircode.Size = new System.Drawing.Size(122, 34);
             this.lblEircode.TabIndex = 89;
             this.lblEircode.Text = "Address";
             // 
-            // btnUpdateRegisteredMemberSearch
+            // btMemberSearch
             // 
-            this.btnUpdateRegisteredMemberSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.btnUpdateRegisteredMemberSearch.Location = new System.Drawing.Point(490, 15);
-            this.btnUpdateRegisteredMemberSearch.Name = "btnUpdateRegisteredMemberSearch";
-            this.btnUpdateRegisteredMemberSearch.Size = new System.Drawing.Size(187, 39);
-            this.btnUpdateRegisteredMemberSearch.TabIndex = 94;
-            this.btnUpdateRegisteredMemberSearch.Text = "SEARCH";
-            this.btnUpdateRegisteredMemberSearch.UseVisualStyleBackColor = false;
-            this.btnUpdateRegisteredMemberSearch.Click += new System.EventHandler(this.btnUpdateRegisteredMember_Click);
+            this.btMemberSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.btMemberSearch.Location = new System.Drawing.Point(490, 15);
+            this.btMemberSearch.Name = "btMemberSearch";
+            this.btMemberSearch.Size = new System.Drawing.Size(187, 39);
+            this.btMemberSearch.TabIndex = 94;
+            this.btMemberSearch.Text = "SEARCH";
+            this.btMemberSearch.UseVisualStyleBackColor = false;
+            this.btMemberSearch.Click += new System.EventHandler(this.btMemberSearch_Click);
             // 
             // lblUpdateMemerID
             // 
@@ -217,28 +217,28 @@
             this.lblUpdateMemerID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateMemerID.Location = new System.Drawing.Point(7, 23);
             this.lblUpdateMemerID.Name = "lblUpdateMemerID";
-            this.lblUpdateMemerID.Size = new System.Drawing.Size(159, 23);
+            this.lblUpdateMemerID.Size = new System.Drawing.Size(221, 34);
             this.lblUpdateMemerID.TabIndex = 95;
             this.lblUpdateMemerID.Text = "Enter Memer ID";
             // 
-            // txtSearchUpdateMemberID
+            // txtSearchMemberID
             // 
-            this.txtSearchUpdateMemberID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchUpdateMemberID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSearchUpdateMemberID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchUpdateMemberID.Location = new System.Drawing.Point(243, 18);
-            this.txtSearchUpdateMemberID.MaxLength = 7;
-            this.txtSearchUpdateMemberID.Name = "txtSearchUpdateMemberID";
-            this.txtSearchUpdateMemberID.Size = new System.Drawing.Size(170, 32);
-            this.txtSearchUpdateMemberID.TabIndex = 96;
+            this.txtSearchMemberID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchMemberID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSearchMemberID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchMemberID.Location = new System.Drawing.Point(243, 18);
+            this.txtSearchMemberID.MaxLength = 7;
+            this.txtSearchMemberID.Name = "txtSearchMemberID";
+            this.txtSearchMemberID.Size = new System.Drawing.Size(170, 42);
+            this.txtSearchMemberID.TabIndex = 96;
             // 
             // pnlUpdateRegisteredMember
             // 
             this.pnlUpdateRegisteredMember.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlUpdateRegisteredMember.Controls.Add(this.btnUpdateRegisteredMemberSearch);
-            this.pnlUpdateRegisteredMember.Controls.Add(this.txtSearchUpdateMemberID);
+            this.pnlUpdateRegisteredMember.Controls.Add(this.btMemberSearch);
+            this.pnlUpdateRegisteredMember.Controls.Add(this.txtSearchMemberID);
             this.pnlUpdateRegisteredMember.Controls.Add(this.lblUpdateMemerID);
             this.pnlUpdateRegisteredMember.Location = new System.Drawing.Point(127, 122);
             this.pnlUpdateRegisteredMember.Name = "pnlUpdateRegisteredMember";
@@ -247,7 +247,7 @@
             // 
             // frmUpdateMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(995, 613);
@@ -288,9 +288,9 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.Label lblEircode;
-        private System.Windows.Forms.Button btnUpdateRegisteredMemberSearch;
+        private System.Windows.Forms.Button btMemberSearch;
         private System.Windows.Forms.Label lblUpdateMemerID;
-        private System.Windows.Forms.TextBox txtSearchUpdateMemberID;
+        private System.Windows.Forms.TextBox txtSearchMemberID;
         private System.Windows.Forms.Panel pnlUpdateRegisteredMember;
     }
 }
