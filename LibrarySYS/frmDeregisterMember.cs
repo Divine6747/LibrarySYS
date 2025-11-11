@@ -4,21 +4,26 @@ using System.Windows.Forms;
 
 namespace LibrarySYS
 {
-    public partial class frmAddMember : Form
+    public partial class frmDeregisterMember : Form
     {
         frmMainMenu parent;
-        public frmAddMember()
+        public frmDeregisterMember()
         {
             InitializeComponent();
             this.parent = new frmMainMenu();
         }
 
-        public frmAddMember(frmMainMenu parent)
-        {
+        public frmDeregisterMember(frmMainMenu parent)
+        {        
             this.parent = parent;
         }
 
-        private void mnuAddMemberBack_Click(object sender, EventArgs e)
+        private void frmUpdateMember_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuDeregisterMemberBack_Click(object sender, EventArgs e)
         {
             this.Close();
             parent.Visible = true;

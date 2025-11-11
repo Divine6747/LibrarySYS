@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddBook.Designer.cs">
+      <DependentUpon>frmAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeregisterMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeregisterMember.Designer.cs">
+      <DependentUpon>frmDeregisterMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateMember.Designer.cs">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddBook.resx">
+      <DependentUpon>frmAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeregisterMember.resx">
+      <DependentUpon>frmDeregisterMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateMember.resx">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddMember.resx">
       <DependentUpon>frmAddMember.cs</DependentUpon>
     </EmbeddedResource>
