@@ -58,7 +58,7 @@
             this.mnuDeregisterMemberBack.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuDeregisterMemberBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuDeregisterMemberBack.Name = "mnuDeregisterMemberBack";
-            this.mnuDeregisterMemberBack.Size = new System.Drawing.Size(89, 31);
+            this.mnuDeregisterMemberBack.Size = new System.Drawing.Size(74, 26);
             this.mnuDeregisterMemberBack.Text = "BACK";
             this.mnuDeregisterMemberBack.Click += new System.EventHandler(this.mnuDeregisterMemberBack_Click);
             // 
@@ -71,7 +71,7 @@
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(1097, 43);
+            this.mnuBackStrip.Size = new System.Drawing.Size(1097, 38);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -82,7 +82,7 @@
             this.lblDeregisterMember.Location = new System.Drawing.Point(27, 49);
             this.lblDeregisterMember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeregisterMember.Name = "lblDeregisterMember";
-            this.lblDeregisterMember.Size = new System.Drawing.Size(276, 33);
+            this.lblDeregisterMember.Size = new System.Drawing.Size(212, 24);
             this.lblDeregisterMember.TabIndex = 85;
             this.lblDeregisterMember.Text = " Deregister Member";
             // 
@@ -124,7 +124,7 @@
             this.txtPhone.Location = new System.Drawing.Point(35, 213);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(291, 32);
+            this.txtPhone.Size = new System.Drawing.Size(291, 27);
             this.txtPhone.TabIndex = 88;
             // 
             // lblPhone
@@ -133,7 +133,7 @@
             this.lblPhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(35, 184);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(72, 23);
+            this.lblPhone.Size = new System.Drawing.Size(59, 21);
             this.lblPhone.TabIndex = 92;
             this.lblPhone.Text = "Phone";
             // 
@@ -145,7 +145,7 @@
             this.txtForename.Location = new System.Drawing.Point(35, 90);
             this.txtForename.MaxLength = 20;
             this.txtForename.Name = "txtForename";
-            this.txtForename.Size = new System.Drawing.Size(291, 32);
+            this.txtForename.Size = new System.Drawing.Size(291, 27);
             this.txtForename.TabIndex = 85;
             // 
             // lblForename
@@ -154,7 +154,7 @@
             this.lblForename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForename.Location = new System.Drawing.Point(35, 61);
             this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(110, 23);
+            this.lblForename.Size = new System.Drawing.Size(89, 21);
             this.lblForename.TabIndex = 91;
             this.lblForename.Text = "Forename";
             // 
@@ -166,7 +166,7 @@
             this.txtSurname.Location = new System.Drawing.Point(573, 90);
             this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(291, 32);
+            this.txtSurname.Size = new System.Drawing.Size(291, 27);
             this.txtSurname.TabIndex = 86;
             // 
             // lblSurname
@@ -175,7 +175,7 @@
             this.lblSurname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.Location = new System.Drawing.Point(573, 61);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(96, 23);
+            this.lblSurname.Size = new System.Drawing.Size(79, 21);
             this.lblSurname.TabIndex = 90;
             this.lblSurname.Text = "Surname";
             // 
@@ -187,7 +187,7 @@
             this.txtEircode.Location = new System.Drawing.Point(573, 213);
             this.txtEircode.MaxLength = 7;
             this.txtEircode.Name = "txtEircode";
-            this.txtEircode.Size = new System.Drawing.Size(291, 32);
+            this.txtEircode.Size = new System.Drawing.Size(291, 27);
             this.txtEircode.TabIndex = 87;
             // 
             // lblEircode
@@ -196,7 +196,7 @@
             this.lblEircode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEircode.Location = new System.Drawing.Point(573, 184);
             this.lblEircode.Name = "lblEircode";
-            this.lblEircode.Size = new System.Drawing.Size(88, 23);
+            this.lblEircode.Size = new System.Drawing.Size(72, 21);
             this.lblEircode.TabIndex = 89;
             this.lblEircode.Text = "Address";
             // 
@@ -216,7 +216,7 @@
             this.lblDegesterMemerID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDegesterMemerID.Location = new System.Drawing.Point(7, 23);
             this.lblDegesterMemerID.Name = "lblDegesterMemerID";
-            this.lblDegesterMemerID.Size = new System.Drawing.Size(173, 23);
+            this.lblDegesterMemerID.Size = new System.Drawing.Size(142, 21);
             this.lblDegesterMemerID.TabIndex = 95;
             this.lblDegesterMemerID.Text = "Enter Member ID";
             // 
@@ -228,7 +228,7 @@
             this.txtSearchDegisterMemberID.Location = new System.Drawing.Point(243, 18);
             this.txtSearchDegisterMemberID.MaxLength = 7;
             this.txtSearchDegisterMemberID.Name = "txtSearchDegisterMemberID";
-            this.txtSearchDegisterMemberID.Size = new System.Drawing.Size(170, 32);
+            this.txtSearchDegisterMemberID.Size = new System.Drawing.Size(170, 27);
             this.txtSearchDegisterMemberID.TabIndex = 96;
             // 
             // pnlUpdateRegisteredMember
@@ -246,7 +246,7 @@
             // 
             // frmDeregisterMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1097, 671);

@@ -24,5 +24,10 @@ namespace LibrarySYS
             frmMainMenu parent = new frmMainMenu();
             parent.Show();
         }
+
+        private void frmRemoveBook_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

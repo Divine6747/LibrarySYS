@@ -53,7 +53,7 @@
             this.mnuAddMemberBack.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.mnuAddMemberBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuAddMemberBack.Name = "mnuAddMemberBack";
-            this.mnuAddMemberBack.Size = new System.Drawing.Size(89, 31);
+            this.mnuAddMemberBack.Size = new System.Drawing.Size(74, 26);
             this.mnuAddMemberBack.Text = "BACK";
             this.mnuAddMemberBack.Click += new System.EventHandler(this.mnuAddMemberBack_Click);
             // 
@@ -66,7 +66,7 @@
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(1025, 43);
+            this.mnuBackStrip.Size = new System.Drawing.Size(1025, 38);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -77,7 +77,7 @@
             this.lblRegisterMember.Location = new System.Drawing.Point(42, 43);
             this.lblRegisterMember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegisterMember.Name = "lblRegisterMember";
-            this.lblRegisterMember.Size = new System.Drawing.Size(239, 33);
+            this.lblRegisterMember.Size = new System.Drawing.Size(183, 24);
             this.lblRegisterMember.TabIndex = 85;
             this.lblRegisterMember.Text = "Register Member";
             // 
@@ -117,7 +117,7 @@
             this.txtPhone.Location = new System.Drawing.Point(38, 229);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(360, 32);
+            this.txtPhone.Size = new System.Drawing.Size(360, 27);
             this.txtPhone.TabIndex = 88;
             // 
             // lblPhone
@@ -126,7 +126,7 @@
             this.lblPhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(38, 200);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(72, 23);
+            this.lblPhone.Size = new System.Drawing.Size(59, 21);
             this.lblPhone.TabIndex = 92;
             this.lblPhone.Text = "Phone";
             // 
@@ -138,7 +138,7 @@
             this.txtForename.Location = new System.Drawing.Point(38, 106);
             this.txtForename.MaxLength = 20;
             this.txtForename.Name = "txtForename";
-            this.txtForename.Size = new System.Drawing.Size(360, 32);
+            this.txtForename.Size = new System.Drawing.Size(360, 27);
             this.txtForename.TabIndex = 85;
             // 
             // lblForename
@@ -147,7 +147,7 @@
             this.lblForename.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForename.Location = new System.Drawing.Point(38, 77);
             this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(110, 23);
+            this.lblForename.Size = new System.Drawing.Size(89, 21);
             this.lblForename.TabIndex = 91;
             this.lblForename.Text = "Forename";
             // 
@@ -159,7 +159,7 @@
             this.txtSurname.Location = new System.Drawing.Point(503, 106);
             this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(360, 32);
+            this.txtSurname.Size = new System.Drawing.Size(360, 27);
             this.txtSurname.TabIndex = 86;
             // 
             // lblSurname
@@ -168,7 +168,7 @@
             this.lblSurname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.Location = new System.Drawing.Point(503, 77);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(96, 23);
+            this.lblSurname.Size = new System.Drawing.Size(79, 21);
             this.lblSurname.TabIndex = 90;
             this.lblSurname.Text = "Surname";
             // 
@@ -180,7 +180,7 @@
             this.txtAddress.Location = new System.Drawing.Point(503, 229);
             this.txtAddress.MaxLength = 7;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(360, 32);
+            this.txtAddress.Size = new System.Drawing.Size(360, 27);
             this.txtAddress.TabIndex = 87;
             // 
             // lblAddress
@@ -189,13 +189,13 @@
             this.lblAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(503, 200);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(88, 23);
+            this.lblAddress.Size = new System.Drawing.Size(72, 21);
             this.lblAddress.TabIndex = 89;
             this.lblAddress.Text = "Address";
             // 
             // frmAddMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1025, 549);
