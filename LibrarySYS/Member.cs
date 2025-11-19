@@ -16,4 +16,3 @@ namespace LibrarySYS
         private bool IsActive;
     }
 }
-}
