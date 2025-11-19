@@ -20,7 +20,6 @@ namespace LibrarySYS
 
         private void frmUpdateMember_Load(object sender, EventArgs e)
         {
-
         }
 
         private void mnuUpdateMemberBack_Click_1(object sender, EventArgs e)
@@ -31,7 +30,11 @@ namespace LibrarySYS
 
         private void btMemberSearch_Click(object sender, EventArgs e)
         {
-          
+            if (txtSearchMemberID.Text.ToString() == "A001")
+            {
+                grpRegisterMembers.Visible = true;
+                btnRegisterMemberSubmit.Visible = true;
+            }
         }
     }
 }
