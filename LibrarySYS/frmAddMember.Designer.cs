@@ -51,6 +51,8 @@
             this.lblTown = new System.Windows.Forms.Label();
             this.txtStreet = new System.Windows.Forms.TextBox();
             this.lblStreet = new System.Windows.Forms.Label();
+            this.lblMemberID = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.mnuBackStrip.SuspendLayout();
             this.grpRegisterMembers.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +65,7 @@
             this.mnuAddMemberBack.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.mnuAddMemberBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuAddMemberBack.Name = "mnuAddMemberBack";
-            this.mnuAddMemberBack.Size = new System.Drawing.Size(89, 31);
+            this.mnuAddMemberBack.Size = new System.Drawing.Size(74, 26);
             this.mnuAddMemberBack.Text = "BACK";
             this.mnuAddMemberBack.Click += new System.EventHandler(this.mnuAddMemberBack_Click);
             // 
@@ -76,7 +78,7 @@
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(974, 43);
+            this.mnuBackStrip.Size = new System.Drawing.Size(974, 38);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -87,7 +89,7 @@
             this.lblRegisterMember.Location = new System.Drawing.Point(34, 43);
             this.lblRegisterMember.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegisterMember.Name = "lblRegisterMember";
-            this.lblRegisterMember.Size = new System.Drawing.Size(239, 33);
+            this.lblRegisterMember.Size = new System.Drawing.Size(183, 24);
             this.lblRegisterMember.TabIndex = 85;
             this.lblRegisterMember.Text = "Register Member";
             // 
@@ -131,9 +133,9 @@
             this.panel1.Controls.Add(this.txtStreet);
             this.panel1.Controls.Add(this.lblStreet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 32);
+            this.panel1.Location = new System.Drawing.Point(3, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 451);
+            this.panel1.Size = new System.Drawing.Size(895, 457);
             this.panel1.TabIndex = 0;
             // 
             // cboCounty
@@ -146,7 +148,7 @@
             this.cboCounty.Location = new System.Drawing.Point(488, 167);
             this.cboCounty.Margin = new System.Windows.Forms.Padding(4);
             this.cboCounty.Name = "cboCounty";
-            this.cboCounty.Size = new System.Drawing.Size(344, 37);
+            this.cboCounty.Size = new System.Drawing.Size(344, 31);
             this.cboCounty.TabIndex = 125;
             // 
             // txtEmail
@@ -157,7 +159,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.MaxLength = 35;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(344, 36);
+            this.txtEmail.Size = new System.Drawing.Size(344, 30);
             this.txtEmail.TabIndex = 124;
             // 
             // lblCounty
@@ -166,7 +168,7 @@
             this.lblCounty.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCounty.Location = new System.Drawing.Point(482, 127);
             this.lblCounty.Name = "lblCounty";
-            this.lblCounty.Size = new System.Drawing.Size(95, 27);
+            this.lblCounty.Size = new System.Drawing.Size(79, 22);
             this.lblCounty.TabIndex = 123;
             this.lblCounty.Text = "County";
             // 
@@ -176,7 +178,7 @@
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(482, 357);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(74, 27);
+            this.lblEmail.Size = new System.Drawing.Size(56, 22);
             this.lblEmail.TabIndex = 122;
             this.lblEmail.Text = "Email";
             // 
@@ -188,7 +190,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(344, 36);
+            this.txtPhone.Size = new System.Drawing.Size(344, 30);
             this.txtPhone.TabIndex = 115;
             // 
             // label1
@@ -197,7 +199,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(44, 357);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 27);
+            this.label1.Size = new System.Drawing.Size(69, 22);
             this.label1.TabIndex = 121;
             this.label1.Text = "Phone";
             // 
@@ -209,7 +211,7 @@
             this.txtForeName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtForeName.MaxLength = 20;
             this.txtForeName.Name = "txtForeName";
-            this.txtForeName.Size = new System.Drawing.Size(344, 36);
+            this.txtForeName.Size = new System.Drawing.Size(344, 30);
             this.txtForeName.TabIndex = 110;
             // 
             // label2
@@ -218,7 +220,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 27);
+            this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 120;
             this.label2.Text = "Forename";
             // 
@@ -230,7 +232,7 @@
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSurname.MaxLength = 20;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(344, 36);
+            this.txtSurname.Size = new System.Drawing.Size(344, 30);
             this.txtSurname.TabIndex = 111;
             // 
             // label3
@@ -239,7 +241,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(482, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 27);
+            this.label3.Size = new System.Drawing.Size(91, 22);
             this.label3.TabIndex = 119;
             this.label3.Text = "Surname";
             // 
@@ -252,7 +254,7 @@
             this.txtEircode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEircode.MaxLength = 7;
             this.txtEircode.Name = "txtEircode";
-            this.txtEircode.Size = new System.Drawing.Size(344, 36);
+            this.txtEircode.Size = new System.Drawing.Size(344, 30);
             this.txtEircode.TabIndex = 114;
             // 
             // lblEircode
@@ -261,7 +263,7 @@
             this.lblEircode.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEircode.Location = new System.Drawing.Point(482, 242);
             this.lblEircode.Name = "lblEircode";
-            this.lblEircode.Size = new System.Drawing.Size(98, 27);
+            this.lblEircode.Size = new System.Drawing.Size(78, 22);
             this.lblEircode.TabIndex = 118;
             this.lblEircode.Text = "Eircode";
             // 
@@ -273,7 +275,7 @@
             this.txtTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTown.MaxLength = 15;
             this.txtTown.Name = "txtTown";
-            this.txtTown.Size = new System.Drawing.Size(344, 36);
+            this.txtTown.Size = new System.Drawing.Size(344, 30);
             this.txtTown.TabIndex = 113;
             // 
             // lblTown
@@ -282,7 +284,7 @@
             this.lblTown.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTown.Location = new System.Drawing.Point(44, 242);
             this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(72, 27);
+            this.lblTown.Size = new System.Drawing.Size(58, 22);
             this.lblTown.TabIndex = 117;
             this.lblTown.Text = "Town";
             // 
@@ -294,7 +296,7 @@
             this.txtStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStreet.MaxLength = 25;
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(344, 36);
+            this.txtStreet.Size = new System.Drawing.Size(344, 30);
             this.txtStreet.TabIndex = 112;
             // 
             // lblStreet
@@ -303,16 +305,42 @@
             this.lblStreet.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStreet.Location = new System.Drawing.Point(44, 127);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(76, 27);
+            this.lblStreet.Size = new System.Drawing.Size(63, 22);
             this.lblStreet.TabIndex = 116;
             this.lblStreet.Text = "Street";
             // 
+            // lblMemberID
+            // 
+            this.lblMemberID.AutoSize = true;
+            this.lblMemberID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberID.Location = new System.Drawing.Point(733, 72);
+            this.lblMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMemberID.Name = "lblMemberID";
+            this.lblMemberID.Size = new System.Drawing.Size(116, 22);
+            this.lblMemberID.TabIndex = 94;
+            this.lblMemberID.Tag = " ";
+            this.lblMemberID.Text = "Member ID:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.label4.Location = new System.Drawing.Point(853, 72);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 22);
+            this.label4.TabIndex = 95;
+            this.label4.Text = "000";
+            // 
             // frmAddMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(974, 656);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.grpRegisterMembers);
             this.Controls.Add(this.lblRegisterMember);
             this.Controls.Add(this.mnuBackStrip);
@@ -357,5 +385,7 @@
         private System.Windows.Forms.Label lblTown;
         private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.Label lblStreet;
+        private System.Windows.Forms.Label lblMemberID;
+        private System.Windows.Forms.Label label4;
     }
 }
