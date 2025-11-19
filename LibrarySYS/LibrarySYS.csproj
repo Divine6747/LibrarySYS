@@ -107,7 +107,6 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMemberManager.cs" />
     <Compile Include="Loan.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="Program.cs" />
