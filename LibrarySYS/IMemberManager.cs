@@ -13,6 +13,5 @@ namespace LibrarySYS
         void DeRegisterMember(string memberID);
         Member FindMemberByID(string memberID);
         List<Member> GetAllMembers();
-
     }
 }
