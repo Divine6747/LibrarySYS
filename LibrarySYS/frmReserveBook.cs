@@ -32,9 +32,9 @@ namespace LibrarySYS
 
         private void mnuBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmMainMenu frmMainMenu = new frmMainMenu();
-            frmMainMenu.ShowDialog();
+            frmMainMenu.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

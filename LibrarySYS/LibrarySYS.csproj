@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCollectBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCollectBook.Designer.cs">
+      <DependentUpon>frmCollectBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRemoveBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="frmReserveBook.Designer.cs">
       <DependentUpon>frmReserveBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReturnBook.Designer.cs">
+      <DependentUpon>frmReturnBook.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUpdateBook.cs">
       <SubType>Form</SubType>
@@ -96,11 +108,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCollectBook.resx">
+      <DependentUpon>frmCollectBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRemoveBook.resx">
       <DependentUpon>frmRemoveBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReserveBook.resx">
       <DependentUpon>frmReserveBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReturnBook.resx">
+      <DependentUpon>frmReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateBook.resx">
       <DependentUpon>frmUpdateBook.cs</DependentUpon>
