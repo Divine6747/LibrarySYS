@@ -155,12 +155,14 @@
             this.mnuCollectBook.Name = "mnuCollectBook";
             this.mnuCollectBook.Size = new System.Drawing.Size(192, 26);
             this.mnuCollectBook.Text = "Collect Book";
+            this.mnuCollectBook.Click += new System.EventHandler(this.mnuCollectBook_Click);
             // 
             // mnuReturnBook
             // 
             this.mnuReturnBook.Name = "mnuReturnBook";
             this.mnuReturnBook.Size = new System.Drawing.Size(192, 26);
             this.mnuReturnBook.Text = "Return Book";
+            this.mnuReturnBook.Click += new System.EventHandler(this.mnuReturnBook_Click);
             // 
             // munExit
             // 

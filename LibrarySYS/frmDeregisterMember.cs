@@ -22,11 +22,5 @@ namespace LibrarySYS
         {
 
         }
-
-        private void mnuDeregisterMemberBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            parent.Visible = true;
-        }
     }
 }

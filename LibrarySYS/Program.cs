@@ -16,7 +16,7 @@ namespace LibrarySYS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRemoveBook());
+            Application.Run(new frmReserveBook());
         }
     }
 }

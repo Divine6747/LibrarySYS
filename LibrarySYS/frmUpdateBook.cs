@@ -24,5 +24,18 @@ namespace LibrarySYS
             frmMainMenu parent = new frmMainMenu();
             parent.Show();
         }
+
+        private void frmUpdateBook_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearchUpdateMemberID.Text == "M")
+            {
+                grpUpdateBook.Visible  = true;
+                btnSubmitUpdate.Visible = true;                
+            }
+        }
     }
 }
