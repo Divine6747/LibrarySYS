@@ -1,8 +1,16 @@
 # LibrarySYS - Unified Contribution Script
 
 # Clone the repository and go into it
-git clone https://github.com/Divine6747/LibrarySYS.git
-cd LibrarySYS
+
+  # If you want to clone it in a folder
+  git clone https://github.com/Divine6747/LibrarySYS.git
+  cd LibrarySYS
+
+  # If you want to clone on VS
+  Open VS --> Clone a Repository 
+  git clone https://github.com/Divine6747/LibrarySYS.git
+  Click --> Clone
+  
 
 # Open project in Visual Studio or VS Code
 # Ensure all dependencies are installed
