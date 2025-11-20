@@ -15,7 +15,7 @@ Before starting work or pushing your branch:
 git fetch origin
 
 # Switch to your branch
-git checkout <your-branch>
+git checkout <your-branch> e.g Heta
 
 # Merge the latest main into your branch
 git merge origin/main
