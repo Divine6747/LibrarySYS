@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace LibrarySYS
 {
-    class Book
+    class Loan
     {
+        private string LoanID;
+        private string MemberID;
         private string BookID;
-        private bool ISNB;
-        private string Title;
-        private string Author;
-        private string Genre;
-        private string Description;
+        private DateTime DateReserved;   
     }
-}
 }
