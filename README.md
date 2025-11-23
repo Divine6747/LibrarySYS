@@ -64,10 +64,10 @@ git push origin Martin
 # Martin     ●────●────●───────────> (feature branch, sync with main)
 
 # Quick summary workflow:
-# 1. git fetch origin
-# 2. git checkout <your-branch>
-# 3. git merge origin/main
-# 4. git add .
-# 5. git commit -m "Your commit message"
-# 6. git push origin <your-branch>
-# 7. Open PR to merge into main
+ 1. git fetch origin
+ 2. git checkout <your-branch>
+ 3. git merge origin/main
+ 4. git add .
+ 5. git commit -m "Your commit message"
+ 6. git push origin <your-branch>
+ 7. Open PR to merge into main
