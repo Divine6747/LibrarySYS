@@ -12,8 +12,8 @@
   Click --> Clone
   
 
-# Open project in Visual Studio or VS Code
-# Ensure all dependencies are installed
+ Open project in Visual Studio or VS Code
+ Ensure all dependencies are installed
 
 # Make sure you are on main and pull the latest changes
 git checkout main
