@@ -1,4 +1,5 @@
 ﻿using LibrarySYS;
+using System;
 using System.Collections.Generic;
 
 class Member : IMemberManager
@@ -25,10 +26,18 @@ class Member : IMemberManager
         Email = email;
         IsActive = true;
     }
-
+    public override string ToString()
+    {
+        return $"ID: {MemberID}, Name: {Forename} {Surname}, Town: {Town}, " +
+               $"Eircode: {Eircode}, Phone: {Phone}, Email: {Email}, Active: {IsActive}";
+    }
     public void AddMember(Member member)
     {
         members.Add(member);
+        foreach (var v in members)
+        {
+            Console.WriteLine("Member = {0}", v);
+        }
     }
     public List<Member> GetAllMembers()
     {

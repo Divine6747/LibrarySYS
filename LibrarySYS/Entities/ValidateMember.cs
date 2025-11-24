@@ -1,47 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace LibrarySYS.Entities
+internal class ValidateMember
 {
-    internal class ValidateMember
+    public static bool ValidateMemberData(
+        string forename, string surname, string town,
+        string eircode, string phone, string email,
+        out string errorMessage)
     {
-        public static void validateName(string forename, string surname) { 
-            if(forename.Contains(" ") || surname.Contains(" "))
-            {
-                throw new ArgumentException("Names cannot contain spaces");
-            }
-            if(forename.Any(char.IsDigit) || surname.Any(char.IsDigit))
-            {
-                throw new ArgumentException("Names cannot contain numbers");
-            }
-            if(string.IsNullOrWhiteSpace(forename) || string.IsNullOrWhiteSpace(surname))
-            {
-                throw new ArgumentException("Names cannot be empty");
-            }
-        }
-        public static void validateTown(string town) { 
-        
-        
-        }
-        public static void validateEircode(string eircode)
-        { 
-        
-        
-        
-        }
-        public static void validatePhone(string phone)
+        //Name rules 
+        if (forename.Contains(" ") || surname.Contains(" "))
         {
-
-
-
+            errorMessage = "Names cannot contain spaces.";
+            return false;
         }
-        public static void validateEmail(string email)
+
+        if (forename.Any(char.IsDigit) || surname.Any(char.IsDigit))
         {
-
-
+            errorMessage = "Names cannot contain numbers.";
+            return false;
         }
+
+        //Empty fields
+        if (string.IsNullOrWhiteSpace(forename) ||
+            string.IsNullOrWhiteSpace(surname) ||
+            string.IsNullOrWhiteSpace(town) ||
+            string.IsNullOrWhiteSpace(eircode) ||
+            string.IsNullOrWhiteSpace(phone) ||
+            string.IsNullOrWhiteSpace(email))
+        {
+            errorMessage = "Fields cannot be empty.";
+            return false;
+        }
+
+        // --- Town ---
+        if (town.Any(char.IsDigit))
+        {
+            errorMessage = "Town cannot contain numbers.";
+            return false;
+        }
+
+        // --- Eircode ---
+        if (eircode.Length != 7)
+        {
+            errorMessage = "Eircode must be 7 characters long.";
+            return false;
+        }
+
+        // --- Phone ---
+        if (phone.Length < 7 || phone.Length > 15 || phone.Any(char.IsLetter))
+        {
+            errorMessage = "Phone number must be valid.";
+            return false;
+        }
+
+        // --- Email ---
+        if (!email.Contains("@") || !email.Contains("."))
+        {
+            errorMessage = "Email must be valid.";
+            return false;
+        }
+
+        // Success
+        errorMessage = "";
+        return true;
     }
 }

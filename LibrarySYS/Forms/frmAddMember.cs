@@ -1,6 +1,5 @@
-﻿using LibrarySYS.Entities;
+﻿
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace LibrarySYS
@@ -27,29 +26,47 @@ namespace LibrarySYS
         }
         private void btnRegisterMemberSubmit_Click(object sender, EventArgs e)
         {
+            string error;
 
-            
-            ValidateMember.validateName(txtForeName.Text,txtSurname.Text);
-            ValidateMember.validateTown(txtTown.Text);
-            ValidateMember.validateEircode(txtEircode.Text);
-            ValidateMember.validatePhone(txtPhone.Text);
-            ValidateMember.validateEmail(txtEmail.Text);
-
-            /*
-            Member newMember = new Member(
-                txtMemberID.Text,
+            bool valid = ValidateMember.ValidateMemberData(
                 txtForeName.Text,
                 txtSurname.Text,
                 txtTown.Text,
                 txtEircode.Text,
                 txtPhone.Text,
-                txtEmail.Text
-            );*/
-           
+                txtEmail.Text,
+                out error
+            );
+
+            if (!valid)
+            {
+                MessageBox.Show(error, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else {
+                Member newMember = new Member(
+                   txtMemberID.Text,
+                   txtForeName.Text,
+                   txtSurname.Text,
+                   txtTown.Text,
+                   txtEircode.Text,
+                   txtPhone.Text,
+                   txtEmail.Text
+               );
+
+                newMember.AddMember(newMember);
+
+            }
+            txtForeName.Clear();
+            txtSurname.Clear();
+            txtTown.Clear();
+            txtEircode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
 
 
-            newMember.AddMember(newMember);
 
         }
+
     }
 }
