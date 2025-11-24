@@ -48,7 +48,7 @@
             this.txtTown = new System.Windows.Forms.TextBox();
             this.lblTown = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtMemberID = new System.Windows.Forms.Label();
             this.mnuBackStrip.SuspendLayout();
             this.grpRegisterMembers.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,6 +98,7 @@
             this.btnRegisterMemberSubmit.TabIndex = 93;
             this.btnRegisterMemberSubmit.Text = "Add Member";
             this.btnRegisterMemberSubmit.UseVisualStyleBackColor = false;
+            this.btnRegisterMemberSubmit.Click += new System.EventHandler(this.btnRegisterMemberSubmit_Click);
             // 
             // grpRegisterMembers
             // 
@@ -269,17 +270,17 @@
             this.lblMemberID.Tag = " ";
             this.lblMemberID.Text = "Member ID:";
             // 
-            // label4
+            // txtMemberID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.label4.Location = new System.Drawing.Point(841, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 22);
-            this.label4.TabIndex = 95;
-            this.label4.Text = "000";
+            this.txtMemberID.AutoSize = true;
+            this.txtMemberID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemberID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.txtMemberID.Location = new System.Drawing.Point(841, 71);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.Size = new System.Drawing.Size(43, 22);
+            this.txtMemberID.TabIndex = 95;
+            this.txtMemberID.Text = "000";
             // 
             // frmAddMember
             // 
@@ -287,7 +288,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(918, 538);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.grpRegisterMembers);
             this.Controls.Add(this.lblRegisterMember);
@@ -330,6 +331,6 @@
         private System.Windows.Forms.TextBox txtTown;
         private System.Windows.Forms.Label lblTown;
         private System.Windows.Forms.Label lblMemberID;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label txtMemberID;
     }
 }
