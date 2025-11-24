@@ -32,7 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,168 +45,135 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Include="Entities\Book.cs" />
-
     <Compile Include="Forms\frmCollectBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmCollectBook.Designer.cs">
       <DependentUpon>frmCollectBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmRemoveBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmRemoveBook.Designer.cs">
       <DependentUpon>frmRemoveBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmReserveBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmReserveBook.Designer.cs">
       <DependentUpon>frmReserveBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmReturnBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmReturnBook.Designer.cs">
       <DependentUpon>frmReturnBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmUpdateBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmUpdateBook.Designer.cs">
       <DependentUpon>frmUpdateBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAddBook.Designer.cs">
       <DependentUpon>frmAddBook.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmDeregisterMember.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmDeregisterMember.Designer.cs">
       <DependentUpon>frmDeregisterMember.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmUpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmUpdateMember.Designer.cs">
       <DependentUpon>frmUpdateMember.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmAddMember.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmAddMember.Designer.cs">
       <DependentUpon>frmAddMember.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Forms\frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="Interfaces\IbookManager.cs" />
     <Compile Include="Interfaces\IMemberManager.cs" />
     <Compile Include="Entities\Loan.cs" />
     <Compile Include="Entities\Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <EmbeddedResource Include="Forms\frmCollectBook.resx">
       <DependentUpon>frmCollectBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmRemoveBook.resx">
       <DependentUpon>frmRemoveBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmReserveBook.resx">
       <DependentUpon>frmReserveBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmReturnBook.resx">
       <DependentUpon>frmReturnBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmUpdateBook.resx">
       <DependentUpon>frmUpdateBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmAddBook.resx">
       <DependentUpon>frmAddBook.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmDeregisterMember.resx">
       <DependentUpon>frmDeregisterMember.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmUpdateMember.resx">
       <DependentUpon>frmUpdateMember.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmAddMember.resx">
       <DependentUpon>frmAddMember.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Forms\frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="Resources\Library.png" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="Resources\Books_Icon.ico" />
   </ItemGroup>
-
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Forms\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Managers\" />
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
