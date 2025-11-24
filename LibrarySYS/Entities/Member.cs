@@ -31,6 +31,49 @@ class Member : IMemberManager
         return $"ID: {MemberID}, Name: {Forename} {Surname}, Town: {Town}, " +
                $"Eircode: {Eircode}, Phone: {Phone}, Email: {Email}, Active: {IsActive}";
     }
+
+    public string memberID
+    {
+        get { return memberID; }
+        set { memberID = value; }
+    }
+
+    public string forename
+    {
+        get { return forename; }
+        set { forename = value; }
+    }
+
+    public string surname
+    {
+        get { return surname; }
+        set { surname = value; }
+    }
+
+    public string town
+    {
+        get { return town; }
+        set { town = value; }
+    }
+
+    public string eircode
+    {
+        get { return eircode; }
+        set { eircode = value; }
+    }
+
+    public string phone
+    {
+        get { return phone; }
+        set { phone = value; }
+    }
+
+    public string email
+    {
+        get { return email; }
+        set { email = value; }
+    }
+
     public void AddMember(Member member)
     {
         members.Add(member);
@@ -44,6 +87,25 @@ class Member : IMemberManager
         return members;
     }
     public void UpdateMember(Member member) { }
-    public void DeRegisterMember(string memberID) { }
-    public Member FindMemberByID(string memberID) { return null; }
+
+    public void DeRegisterMember(string memberID)
+    {
+        Member m = FindMemberByID(memberID);
+
+        if (m != null)
+        {
+            m.IsActive = false;
+        }
+    }
+    public Member FindMemberByID(string memberID)
+    {
+        foreach (Member m in members)
+        {
+            if (m.MemberID == memberID)
+            {
+                return m;
+            }
+        }
+        return null;
+    }
 }
