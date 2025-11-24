@@ -249,6 +249,7 @@
             this.btnDegeristerMemberConfirm.TabIndex = 93;
             this.btnDegeristerMemberConfirm.Text = "Derigister";
             this.btnDegeristerMemberConfirm.UseVisualStyleBackColor = false;
+            this.btnDegeristerMemberConfirm.Click += new System.EventHandler(this.btnDegeristerMemberConfirm_Click);
             // 
             // pnlUpdateRegisteredMember
             // 
@@ -272,6 +273,7 @@
             this.btnSearchDeregisteredMember.TabIndex = 94;
             this.btnSearchDeregisteredMember.Text = "SEARCH";
             this.btnSearchDeregisteredMember.UseVisualStyleBackColor = false;
+            this.btnSearchDeregisteredMember.Click += new System.EventHandler(this.btnSearchDeregisteredMember_Click);
             // 
             // txtSearchDegisterMemberID
             // 
