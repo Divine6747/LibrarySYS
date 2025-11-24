@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace LibrarySYS
 {
-    class Book
+    class Book : IbookManager
     {
+            // test add
+        private static List<Book> books = new List<Book>();
         private string BookID;
         private bool ISBN;
         private string Title;
@@ -46,5 +48,38 @@ namespace LibrarySYS
         public void SetPublication(DateTime publication) { this.Publication = publication; }
         public void SetGenre(string genre) { this.Genre = genre; }
         public void SetDescription(string description) { this.Description = description; }
+
+        public void AddBook(Book book)
+        {
+
+        }
+
+        public void UpdateBook(Book book)
+        {
+
+        }
+
+        public void RemoveBook(Book book)
+        {
+
+        }
+
+        public void FindBookById(Book book)
+        {
+
+        }
+
+        public List<Book> SearchByTitle(String tile)
+        {
+            return books;
+        }
+
+        public List<Book> GetAllBooks()
+        {
+            return books;
+        }
+
+
+
     }
 }

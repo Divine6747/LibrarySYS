@@ -9,7 +9,7 @@ namespace LibrarySYS
     interface IbookManager
     {
         void AddBook(Book book);
-        void Update(Book book);
+        void UpdateBook(Book book);
         void RemoveBook(Book book);
         void FindBookById(Book book);
         List<Book> SearchByTitle(String tile);
