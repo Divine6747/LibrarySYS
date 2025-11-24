@@ -32,28 +32,28 @@ internal class ValidateMember
             return false;
         }
 
-        // --- Town ---
+        //Town
         if (town.Any(char.IsDigit))
         {
             errorMessage = "Town cannot contain numbers.";
             return false;
         }
 
-        // --- Eircode ---
+        //Eircode
         if (eircode.Length != 7)
         {
             errorMessage = "Eircode must be 7 characters long.";
             return false;
         }
 
-        // --- Phone ---
+        //Phone
         if (phone.Length < 7 || phone.Length > 15 || phone.Any(char.IsLetter))
         {
             errorMessage = "Phone number must be valid.";
             return false;
         }
 
-        // --- Email ---
+        //Email
         if (!email.Contains("@") || !email.Contains("."))
         {
             errorMessage = "Email must be valid.";
