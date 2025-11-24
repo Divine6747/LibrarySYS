@@ -63,12 +63,6 @@ namespace LibrarySYS
                 newBook.AddBook(newBook);
 
             }
-            txtForeName.Clear();
-            txtSurname.Clear();
-            txtTown.Clear();
-            txtEircode.Clear();
-            txtPhone.Clear();
-            txtEmail.Clear();
         }
     }
 }

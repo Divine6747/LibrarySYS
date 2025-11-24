@@ -1,5 +1,4 @@
-﻿using LibrarySYS.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,19 +8,18 @@ namespace LibrarySYS
 {
     class Book : IbookManager
     {
-            // test add
+        // test add
         private static List<Book> books = new List<Book>();
-
         private string BookID;
         private string ISBN;
         private string Title;
         private string Author;
         private DateTime Publication;
-        List<Genre> Genre;
+        private string Genre;
         private string Description;
 
 
-        public Book(string bookID, string isbn, string title, string author, DateTime publication, List<Genre> genre, string description)
+        public Book(string bookID, string isbn, string title, string author, DateTime publication, string genre, string description)
         {
             this.BookID = bookID;
             this.ISBN = isbn;
@@ -39,27 +37,38 @@ namespace LibrarySYS
         public string GetTitle() { return Title; }
         public string GetAuthor() { return Author; }
         public DateTime GetPublication() { return Publication; }
-        public List<Genre> GetGenre() { return Genre; }
+        public string GetGenre() { return Genre; }
         public string GetDescription() { return Description; }
 
 
-        public void setBookID (string bookID) { this.BookID = bookID; }
+        public void setBookID(string bookID) { this.BookID = bookID; }
         public void SetISBN(string isbn) { this.ISBN = isbn; }
         public void SetTitle(string title) { this.Title = title; }
         public void SetAuthor(string author) { this.Author = author; }
         public void SetPublication(DateTime publication) { this.Publication = publication; }
-        public void SetGenre(List<Genre> genre) { this.Genre = genre; }
+        public void SetGenre(string genre) { this.Genre = genre; }
         public void SetDescription(string description) { this.Description = description; }
 
         public void AddBook(Book book)
         {
-            books.Add(book);
 
         }
 
         public void UpdateBook(Book book)
         {
-
+            for (int i = 0; i < books.Count; i++)
+            {
+                if (books[i].BookID == book.BookID)
+                {
+                    books[i].SetISBN(book.ISBN);
+                    books[i].SetTitle(book.Title);
+                    books[i].SetAuthor(book.Author);
+                    books[i].SetPublication(book.Publication);
+                    books[i].SetGenre(book.Genre);
+                    books[i].SetDescription(book.Description);
+                    break;
+                }
+            }
         }
 
         public void RemoveBook(Book book)

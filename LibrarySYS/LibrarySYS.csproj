@@ -49,6 +49,7 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\ValidateBook.cs" />
     <Compile Include="Entities\ValidateMember.cs" />
+    <Compile Include="Enum\Genre.cs" />
     <Compile Include="Forms\frmCollectBook.cs">
       <SubType>Form</SubType>
     </Compile>
