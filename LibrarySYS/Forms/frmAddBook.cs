@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibrarySYS.Entities;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -23,6 +24,51 @@ namespace LibrarySYS
             this.Close();
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.Show();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            string error;
+            string dateString = dtpPublication.Value.ToString("yyyy-MM-dd");
+
+            
+
+            bool valid = ValidateBook.ValidateBookData(
+                txtISBN.Text,
+                txtTitle.Text,
+                txtAuthor.Text,
+                dtpPublication.Text,
+                cboGenre.Text,
+                txtDescription.Text,
+                out error
+            );
+
+            if (!valid)
+            {
+                MessageBox.Show(error, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                Book newBook = new Book(
+                  //Kesken BookID.Text
+                   txtISBN.Text,
+                   txtTitle.Text,
+                   txtAuthor.Text,
+                   dateString,
+                   cboGenre.SelectedIndex.ToString,
+                   txtDescription.Text
+               );
+
+                newBook.AddBook(newBook);
+
+            }
+            txtForeName.Clear();
+            txtSurname.Clear();
+            txtTown.Clear();
+            txtEircode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
         }
     }
 }

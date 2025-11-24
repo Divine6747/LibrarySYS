@@ -9,7 +9,7 @@ namespace LibrarySYS.Entities
     internal class ValidateBook
     {
         public static bool ValidateBookData(
-            string title, string author, string isbn,
+            string isbn,string title, string author, string publication,string genre,string description,
             out string errorMessage)
         {
             // Title and Author rules 

@@ -53,6 +53,7 @@ namespace LibrarySYS
 
         public void AddBook(Book book)
         {
+            books.Add(book);
 
         }
 
