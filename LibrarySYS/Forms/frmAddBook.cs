@@ -51,6 +51,17 @@ namespace LibrarySYS
             else
             {
                 Book newBook = new Book(
+                    "",                   
+                    txtISBN.Text,           
+                    txtTitle.Text,         
+                    txtAuthor.Text,         
+                    dtpPublication.Value,   
+                    cboGenre.Text,          
+                    txtDescription.Text     
+                );
+
+
+                /*                Book newBook = new Book(
                   //Kesken BookID.Text
                    txtISBN.Text,
                    txtTitle.Text,
@@ -59,6 +70,8 @@ namespace LibrarySYS
                    cboGenre.SelectedIndex.ToString,
                    txtDescription.Text
                );
+
+                */
 
                 newBook.AddBook(newBook);
 
