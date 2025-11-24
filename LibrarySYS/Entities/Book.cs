@@ -8,7 +8,7 @@ namespace LibrarySYS
 {
     class Book : IbookManager
     {
-            // test
+            // test add
         private static List<Book> books = new List<Book>();
         private string BookID;
         private bool ISBN;
