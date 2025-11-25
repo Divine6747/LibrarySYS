@@ -1,4 +1,5 @@
 ﻿using LibrarySYS.Entities;
+using LibrarySYS.Enum;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace LibrarySYS
         public frmAddBook(frmMainMenu parent)
         {        
             this.parent = parent;
+            this.Load += frmAddBook_Load;
         }
 
         private void mnuAddBookBack_Click(object sender, EventArgs e)
@@ -74,8 +76,19 @@ namespace LibrarySYS
                 */
 
                 newBook.AddBook(newBook);
+                txtISBN.Clear();
+                txtTitle.Clear();
+                txtAuthor.Clear();
+                dtpPublication.Value = DateTime.Now;
+                txtDescription.Clear();
 
             }
+        }
+        //In progress Heta
+        private void frmAddBook_Load(object sender, EventArgs e)
+        {
+            cboGenre.Items.AddRange(System.Enum.GetNames(typeof(Genre)));
+            MessageBox.Show($"Genres loaded: {cboGenre.Items.Count} items");
         }
     }
 }

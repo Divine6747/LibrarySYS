@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibrarySYS.Enum
 {
-    enum Genre
+    public enum Genre
     {
         Action,
         Adventure,
