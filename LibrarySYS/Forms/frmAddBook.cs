@@ -62,7 +62,7 @@ namespace LibrarySYS
 
 
                 /*                Book newBook = new Book(
-                  //Kesken BookID.Text
+                  //In progress BookID.Text
                    txtISBN.Text,
                    txtTitle.Text,
                    txtAuthor.Text,
