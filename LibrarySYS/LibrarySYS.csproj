@@ -110,6 +110,7 @@
     <Compile Include="Forms\frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generator\IdGenerator.cs" />
     <Compile Include="Interfaces\IbookManager.cs" />
     <Compile Include="Interfaces\IMemberManager.cs" />
     <Compile Include="Entities\Loan.cs" />
