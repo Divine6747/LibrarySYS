@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace LibrarySYS
 {
     class Book : IbookManager
     {
-        // test add
+        
         private static List<Book> books = new List<Book>();
         private string BookID;
         private string ISBN;
@@ -30,7 +32,11 @@ namespace LibrarySYS
             this.Description = description;
 
         }
-
+        public override string ToString()
+        {
+            return $"ID: {BookID}, ISBN: {ISBN}, Title: {Title}, " +
+                   $"Author: {Author}, Publication: {Publication}, Genre: {Genre}, Description: {Description}";
+        }
 
         public string GetBookID() { return BookID; }
         public string GetISBN() { return ISBN; }
@@ -51,7 +57,11 @@ namespace LibrarySYS
 
         public void AddBook(Book book)
         {
-
+            books.Add(book);
+            foreach (var v in books)
+            {
+                Console.WriteLine("Book = {0}", v);
+            }
         }
 
         public void UpdateBook(Book book)

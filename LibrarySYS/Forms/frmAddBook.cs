@@ -1,5 +1,6 @@
 ﻿using LibrarySYS.Entities;
 using LibrarySYS.Enum;
+using LibrarySYS.Helpers;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -27,20 +28,24 @@ namespace LibrarySYS
             frmMainMenu frmMainMenu = new frmMainMenu();
             frmMainMenu.Show();
         }
+        private void frmAddBook_Load(object sender, EventArgs e)
+        {
+            cboGenre.Items.AddRange(System.Enum.GetNames(typeof(Genre)));
+            MessageBox.Show($"Genres loaded: {cboGenre.Items.Count} items");
+        }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click_1(object sender, EventArgs e)
         {
             string error;
-            string dateString = dtpPublication.Value.ToString("yyyy-MM-dd");
-
-            
+            string bookid = IdGenerator.GenerateBookId();
+            string genre = cboGenre.SelectedItem.ToString();
 
             bool valid = ValidateBook.ValidateBookData(
                 txtISBN.Text,
                 txtTitle.Text,
                 txtAuthor.Text,
                 dtpPublication.Text,
-                cboGenre.Text,
+                genre,
                 txtDescription.Text,
                 out error
             );
@@ -53,42 +58,25 @@ namespace LibrarySYS
             else
             {
                 Book newBook = new Book(
-                    "",                   
-                    txtISBN.Text,           
-                    txtTitle.Text,         
-                    txtAuthor.Text,         
-                    dtpPublication.Value,   
-                    cboGenre.Text,          
-                    txtDescription.Text     
+                    bookid,
+                    txtISBN.Text,
+                    txtTitle.Text,
+                    txtAuthor.Text,
+                    dtpPublication.Value,
+                    genre,
+                    txtDescription.Text
                 );
-
-
-                /*                Book newBook = new Book(
-                  //In progress BookID.Text
-                   txtISBN.Text,
-                   txtTitle.Text,
-                   txtAuthor.Text,
-                   dateString,
-                   cboGenre.SelectedIndex.ToString,
-                   txtDescription.Text
-               );
-
-                */
 
                 newBook.AddBook(newBook);
                 txtISBN.Clear();
                 txtTitle.Clear();
                 txtAuthor.Clear();
+                cboGenre.SelectedIndex = -1;
                 dtpPublication.Value = DateTime.Now;
                 txtDescription.Clear();
 
             }
-        }
-        //In progress Heta
-        private void frmAddBook_Load(object sender, EventArgs e)
-        {
-            cboGenre.Items.AddRange(System.Enum.GetNames(typeof(Genre)));
-            MessageBox.Show($"Genres loaded: {cboGenre.Items.Count} items");
+
         }
     }
 }
