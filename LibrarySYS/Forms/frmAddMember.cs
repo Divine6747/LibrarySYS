@@ -1,4 +1,5 @@
 ﻿
+using LibrarySYS.Helpers;
 using System;
 using System.Windows.Forms;
 
@@ -28,6 +29,8 @@ namespace LibrarySYS
         {
             string error;
 
+            string memberid = IdGenerator.GenerateMemberId();
+
             bool valid = ValidateMember.ValidateMemberData(
                 txtForeName.Text,
                 txtSurname.Text,
@@ -45,7 +48,7 @@ namespace LibrarySYS
             }
             else {
                 Member newMember = new Member(
-                   txtMemberID.Text,
+                   memberid,
                    txtForeName.Text,
                    txtSurname.Text,
                    txtTown.Text,
