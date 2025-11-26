@@ -31,7 +31,6 @@ namespace LibrarySYS
         private void frmAddBook_Load(object sender, EventArgs e)
         {
             cboGenre.Items.AddRange(System.Enum.GetNames(typeof(Genre)));
-            MessageBox.Show($"Genres loaded: {cboGenre.Items.Count} items");
         }
 
         private void btnSubmit_Click_1(object sender, EventArgs e)

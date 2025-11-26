@@ -24,9 +24,22 @@ namespace LibrarySYS.Entities
                 return false;
             }
             // ISBN rules
-            if (isbn.Length != 13 || isbn.Any(char.IsLetter))
+            if (isbn.Length > 13 || isbn.Any(char.IsLetter) || isbn.Length < 13)
             {
                 errorMessage = "ISBN must be a 13-digit number.";
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(publication))
+            {
+                errorMessage = "Publication date cannot be empty.";
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(genre))
+            {
+                errorMessage = "Genre cannot be empty.";
+                return false;
+            } if (string.IsNullOrWhiteSpace(description)) {
+                errorMessage = "Description cannot be empty.";
                 return false;
             }
             errorMessage = "";
