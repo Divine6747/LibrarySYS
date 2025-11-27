@@ -300,6 +300,7 @@
             this.Name = "frmAddMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
+            this.Load += new System.EventHandler(this.frmAddMember_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.grpRegisterMembers.ResumeLayout(false);

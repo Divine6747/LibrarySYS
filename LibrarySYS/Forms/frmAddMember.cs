@@ -71,5 +71,9 @@ namespace LibrarySYS
 
         }
 
+        private void frmAddMember_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

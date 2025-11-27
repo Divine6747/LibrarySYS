@@ -64,6 +64,7 @@
             this.mnuDeregisterMemberBack.Name = "mnuDeregisterMemberBack";
             this.mnuDeregisterMemberBack.Size = new System.Drawing.Size(74, 26);
             this.mnuDeregisterMemberBack.Text = "BACK";
+            this.mnuDeregisterMemberBack.Click += new System.EventHandler(this.mnuDeregisterMemberBack_Click);
             // 
             // mnuBackStrip
             // 

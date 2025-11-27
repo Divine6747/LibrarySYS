@@ -88,18 +88,20 @@ class Member : IMemberManager
 
         if (m != null)
         {
-            m.IsActive = false;
+            m.SetIsActive(false);
         }
     }
+
     public Member FindMemberByID(string memberID)
     {
         foreach (Member m in members)
         {
-            if (m.MemberID == memberID)
+            if (m.GetMemberID() == memberID)
             {
                 return m;
             }
         }
         return null;
     }
+
 }

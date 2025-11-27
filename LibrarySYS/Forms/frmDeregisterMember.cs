@@ -8,16 +8,13 @@ namespace LibrarySYS
     {
         frmMainMenu parent;
         Member memberManager = new Member("", "", "", "", "", "", "");
+
         public frmDeregisterMember()
         {
             InitializeComponent();
             this.parent = new frmMainMenu();
         }
 
-        public frmDeregisterMember(frmMainMenu parent)
-        {        
-            this.parent = parent;
-        }
 
         private void frmUpdateMember_Load(object sender, EventArgs e)
         {
@@ -37,7 +34,18 @@ namespace LibrarySYS
                 return;
             }
 
-            Member found = memberManager.FindMemberByID(memberID);
+            Member found = null;
+
+            foreach (Member m in memberManager.GetAllMembers())
+            {
+                if (m.GetMemberID() == memberID)
+                {
+                    found = m;
+                    break;
+                }
+            }
+
+
 
             if (found == null)
             {
@@ -49,13 +57,23 @@ namespace LibrarySYS
                 return;
             }
 
+            if (!found.GetIsActive())
+            {
+                MessageBox.Show("This member is already deregistered.", "Inactive Member",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                grpDeregisterMember.Visible = false;
+                btnDegeristerMemberConfirm.Visible = false;
+                return;
+            }
 
-            txtForeName.Text = found.forename;
-            txtSurname.Text = found.surname;
-            txtTown.Text = found.town;
-            txtEircode.Text = found.eircode;
-            txtPhone.Text = found.phone;
-            txtEmail.Text = found.email;
+
+            txtForeName.Text = found.GetForename();
+            txtSurname.Text = found.GetSurname();
+            txtTown.Text = found.GetTown();
+            txtEircode.Text = found.GetEircode();
+            txtPhone.Text = found.GetPhone();
+            txtEmail.Text = found.GetEmail();
+
 
             grpDeregisterMember.Visible = true;
             btnDegeristerMemberConfirm.Visible = true;
@@ -97,8 +115,16 @@ namespace LibrarySYS
 
                 ClearMemberDetails();
                 txtSearchDegisterMemberID.Clear();
+                grpDeregisterMember.Visible = false;
+                btnDegeristerMemberConfirm.Visible = false;
             }
 
+        }
+
+        private void mnuDeregisterMemberBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Visible = true;
         }
     }
 }
