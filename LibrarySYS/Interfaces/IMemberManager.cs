@@ -1,18 +1,15 @@
-﻿using System;
+﻿using LibrarySystem.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LibrarySYS
+
+namespace LibrarySYS.Interfaces
 {
     internal interface IMemberManager
     {
         void AddMember(Member member);
         void UpdateMember(Member member);
-        void DeRegisterMember(string memberID);
-        Member FindMemberByID(string memberID);
+        void DeregisterMember(string memberID);
+        Member FindMemberById(string memberID);
         List<Member> GetAllMembers();
-
     }
 }

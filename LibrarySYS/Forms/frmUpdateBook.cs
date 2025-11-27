@@ -1,41 +1,77 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
+using LibrarySYS.Entities;
+using LibrarySYS.Enums;
+using LibrarySYS.Managers;
 
 namespace LibrarySYS
 {
     public partial class frmUpdateBook : Form
     {
-        frmMainMenu parent;
-        public frmUpdateBook()
+        private BookManager _bookManager;
+        private Book _currentBook; 
+        public frmUpdateBook(BookManager bookManager)
         {
             InitializeComponent();
-            this.parent = new frmMainMenu();
-        }
+            _bookManager = bookManager;
 
-        public frmUpdateBook(frmMainMenu parent)
-        {        
-            this.parent = parent;
+            cboGenre.DataSource = Enum.GetValues(typeof(Genre));
+            cboGenre.SelectedIndex = -1;
         }
 
         private void mnuBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmMainMenu parent = new frmMainMenu();
-            parent.Show();
         }
 
         private void frmUpdateBook_Load(object sender, EventArgs e)
         {
+            ResetUpdateFields();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void ResetUpdateFields()
         {
-            if (txtSearchUpdateMemberID.Text == "M")
+            txtSearchUpdateMemberID.Clear();
+            txtUpdateTitle.Clear();
+            txtUpdateBookAuthor.Clear();
+            txtUpdateISBN.Clear();
+            txtDescription.Clear();
+            cboGenre.SelectedIndex = -1;
+            dtpPublication.Value = DateTime.Today;
+
+            grpUpdateBook.Visible = false;
+            btnSubmitUpdate.Visible = false;
+
+            _currentBook = null;
+        }
+
+        private void btnSearchUpdateBookID_Click(object sender, EventArgs e)
+        {
+            if (_currentBook == null)
             {
-                grpUpdateBook.Visible  = true;
-                btnSubmitUpdate.Visible = true;                
+                MessageBox.Show("Please search for a book first.");
+                return;
             }
+
+            if (string.IsNullOrWhiteSpace(txtUpdateTitle.Text) ||
+                string.IsNullOrWhiteSpace(txtUpdateBookAuthor.Text) ||
+                cboGenre.SelectedItem == null)
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return;
+            }
+
+            _currentBook.Title = txtUpdateTitle.Text.Trim();
+            _currentBook.Author = txtUpdateBookAuthor.Text.Trim();
+            _currentBook.ISBN = txtUpdateISBN.Text.Trim();
+            _currentBook.Description = txtDescription.Text.Trim();
+            _currentBook.Genre = (Genre)cboGenre.SelectedItem;
+            _currentBook.Publication = dtpPublication.Value;
+
+            _bookManager.UpdateBook(_currentBook);
+
+            MessageBox.Show($"Book '{_currentBook.Title}' updated successfully.");
+            ResetUpdateFields();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibrarySYS.Entities;
+using LibrarySYS.Managers;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,26 +8,25 @@ namespace LibrarySYS
 {
     public partial class frmRemoveBook : Form
     {
-        frmMainMenu parent;
-        public frmRemoveBook()
+        private readonly BookManager _bookManager;
+        private Book _currentBook;
+        public frmRemoveBook(BookManager bookManager)
         {
             InitializeComponent();
-            this.parent = new frmMainMenu();
-        }
-
-        public frmRemoveBook(frmMainMenu parent)
-        {        
-            this.parent = parent;
+            _bookManager = bookManager;
         }
 
         private void mnuBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmMainMenu parent = new frmMainMenu();
-            parent.Show();
         }
 
-        private void frmRemoveBook_Load(object sender, EventArgs e)
+        private void btnRemoveBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchBookId_Click(object sender, EventArgs e)
         {
 
         }

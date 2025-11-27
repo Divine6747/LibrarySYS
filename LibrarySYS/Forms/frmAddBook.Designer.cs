@@ -58,20 +58,21 @@
             this.mnuAddBookBack.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuAddBookBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuAddBookBack.Name = "mnuAddBookBack";
-            this.mnuAddBookBack.Size = new System.Drawing.Size(74, 26);
+            this.mnuAddBookBack.Size = new System.Drawing.Size(124, 44);
             this.mnuAddBookBack.Text = "BACK";
             this.mnuAddBookBack.Click += new System.EventHandler(this.mnuAddBookBack_Click);
             // 
             // mnuBackStrip
             // 
             this.mnuBackStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.mnuBackStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuBackStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuBackStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAddBookBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(917, 38);
+            this.mnuBackStrip.Size = new System.Drawing.Size(917, 56);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -82,7 +83,7 @@
             this.lblAddBook.Location = new System.Drawing.Point(29, 43);
             this.lblAddBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddBook.Name = "lblAddBook";
-            this.lblAddBook.Size = new System.Drawing.Size(110, 24);
+            this.lblAddBook.Size = new System.Drawing.Size(192, 44);
             this.lblAddBook.TabIndex = 85;
             this.lblAddBook.Text = "Add Book";
             // 
@@ -117,7 +118,7 @@
             this.dtpPublication.MaxDate = new System.DateTime(5000, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.Name = "dtpPublication";
-            this.dtpPublication.Size = new System.Drawing.Size(309, 30);
+            this.dtpPublication.Size = new System.Drawing.Size(309, 47);
             this.dtpPublication.TabIndex = 105;
             // 
             // txtDescription
@@ -142,7 +143,7 @@
             this.cboGenre.Location = new System.Drawing.Point(50, 322);
             this.cboGenre.Margin = new System.Windows.Forms.Padding(4);
             this.cboGenre.Name = "cboGenre";
-            this.cboGenre.Size = new System.Drawing.Size(309, 31);
+            this.cboGenre.Size = new System.Drawing.Size(309, 48);
             this.cboGenre.TabIndex = 104;
             // 
             // lblGenre
@@ -151,7 +152,7 @@
             this.lblGenre.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenre.Location = new System.Drawing.Point(45, 271);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(69, 22);
+            this.lblGenre.Size = new System.Drawing.Size(118, 40);
             this.lblGenre.TabIndex = 115;
             this.lblGenre.Text = "Genre";
             // 
@@ -163,7 +164,7 @@
             this.txtAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAuthor.MaxLength = 35;
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(309, 30);
+            this.txtAuthor.Size = new System.Drawing.Size(309, 47);
             this.txtAuthor.TabIndex = 103;
             // 
             // lblAuthor
@@ -172,7 +173,7 @@
             this.lblAuthor.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuthor.Location = new System.Drawing.Point(45, 160);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(74, 22);
+            this.lblAuthor.Size = new System.Drawing.Size(122, 40);
             this.lblAuthor.TabIndex = 114;
             this.lblAuthor.Text = "Author";
             // 
@@ -184,7 +185,7 @@
             this.txtISBN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtISBN.MaxLength = 10;
             this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(309, 30);
+            this.txtISBN.Size = new System.Drawing.Size(309, 47);
             this.txtISBN.TabIndex = 101;
             // 
             // lblISBN
@@ -193,7 +194,7 @@
             this.lblISBN.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblISBN.Location = new System.Drawing.Point(45, 49);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(49, 22);
+            this.lblISBN.Size = new System.Drawing.Size(84, 40);
             this.lblISBN.TabIndex = 112;
             this.lblISBN.Text = "ISBN";
             // 
@@ -205,7 +206,7 @@
             this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTitle.MaxLength = 25;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(309, 30);
+            this.txtTitle.Size = new System.Drawing.Size(309, 47);
             this.txtTitle.TabIndex = 102;
             // 
             // lblTitle
@@ -214,7 +215,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(437, 49);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(43, 22);
+            this.lblTitle.Size = new System.Drawing.Size(74, 40);
             this.lblTitle.TabIndex = 111;
             this.lblTitle.Text = "Title";
             // 
@@ -224,7 +225,7 @@
             this.lblDescription.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(437, 271);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(111, 22);
+            this.lblDescription.Size = new System.Drawing.Size(196, 40);
             this.lblDescription.TabIndex = 109;
             this.lblDescription.Text = "Description";
             // 
@@ -234,7 +235,7 @@
             this.lblPublication.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPublication.Location = new System.Drawing.Point(437, 160);
             this.lblPublication.Name = "lblPublication";
-            this.lblPublication.Size = new System.Drawing.Size(111, 22);
+            this.lblPublication.Size = new System.Drawing.Size(196, 40);
             this.lblPublication.TabIndex = 110;
             this.lblPublication.Text = "Publication";
             // 
@@ -249,10 +250,11 @@
             this.btnSubmit.TabIndex = 108;
             this.btnSubmit.Text = "Add Book";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // frmAddBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(917, 619);

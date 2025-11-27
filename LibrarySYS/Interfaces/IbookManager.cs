@@ -1,25 +1,16 @@
-﻿using System;
+﻿using LibrarySYS.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LibrarySYS
+namespace LibrarySYS.Interfaces
 {
-    interface IbookManager
+    interface IBookManager
     {
         void AddBook(Book book);
         void UpdateBook(Book book);
-        void RemoveBook(Book book);
-        void FindBookById(Book book);
-        List<Book> SearchByTitle(String tile);
-
+        void RemoveBook(string bookId);
+        Book FindBookById(string bookId);
+        List<Book> SearchBooksByTitle(string tile);
         List<Book> GetAllBooks();
-
-
-
-
-
-
+        void SetAvailability(string bookId, bool value);
     }
 }

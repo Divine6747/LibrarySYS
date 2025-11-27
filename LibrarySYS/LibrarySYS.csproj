@@ -49,7 +49,8 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\ValidateBook.cs" />
     <Compile Include="Entities\ValidateMember.cs" />
-    <Compile Include="Enum\Genre.cs" />
+    <Compile Include="Enums\County.cs" />
+    <Compile Include="Enums\Genre.cs" />
     <Compile Include="Forms\frmCollectBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,10 +112,14 @@
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Generator\IdGenerator.cs" />
-    <Compile Include="Interfaces\IbookManager.cs" />
+    <Compile Include="Interfaces\IBookManager.cs" />
+    <Compile Include="Interfaces\ILoanManager.cs" />
     <Compile Include="Interfaces\IMemberManager.cs" />
     <Compile Include="Entities\Loan.cs" />
     <Compile Include="Entities\Member.cs" />
+    <Compile Include="Managers\BookManager.cs" />
+    <Compile Include="Managers\LoanManager.cs" />
+    <Compile Include="Managers\MemberManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmCollectBook.resx">
@@ -176,8 +181,6 @@
   <ItemGroup>
     <Content Include="Resources\Books_Icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Managers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

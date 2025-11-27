@@ -1,4 +1,7 @@
-﻿using System;
+﻿using LibrarySYS.Enums;
+using LibrarySYS.Managers;
+using LibrarySystem.Entities;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +10,7 @@ namespace LibrarySYS
     public partial class frmDeregisterMember : Form
     {
         frmMainMenu parent;
-        Member memberManager = new Member("", "", "", "", "", "", "");
+        private Member memberManager;
 
         public frmDeregisterMember()
         {
@@ -44,8 +47,6 @@ namespace LibrarySYS
                     break;
                 }
             }
-
-
 
             if (found == null)
             {
@@ -108,7 +109,7 @@ namespace LibrarySYS
 
             if (result == DialogResult.Yes)
             {
-                memberManager.DeRegisterMember(memberID);
+                memberManager.DeregisterMember(memberID);
 
                 MessageBox.Show("Member deregistered.", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

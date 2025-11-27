@@ -1,107 +1,77 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using LibrarySYS.Enums;
 
-namespace LibrarySYS
+namespace LibrarySYS.Entities
 {
-    class Book : IbookManager
+    public class Book
     {
-        
-        private static List<Book> books = new List<Book>();
-        private string BookID;
-        private string ISBN;
-        private string Title;
-        private string Author;
-        private DateTime Publication;
-        private string Genre;
-        private string Description;
+        private string _bookId;
+        private string _isbn;
+        private string _title;
+        private string _author;
+        private DateTime _publication;
+        private Genre _genre;
+        private string _description;
+        private bool _isAvailable;
 
-
-        public Book(string bookID, string isbn, string title, string author, DateTime publication, string genre, string description)
+        public string BookId
         {
-            this.BookID = bookID;
-            this.ISBN = isbn;
-            this.Title = title;
-            this.Author = author;
-            this.Publication = publication;
-            this.Genre = genre;
-            this.Description = description;
-
-        }
-        public override string ToString()
-        {
-            return $"ID: {BookID}, ISBN: {ISBN}, Title: {Title}, " +
-                   $"Author: {Author}, Publication: {Publication}, Genre: {Genre}, Description: {Description}";
+            get { return _bookId; }
+            set { _bookId = value; }
         }
 
-        public string GetBookID() { return BookID; }
-        public string GetISBN() { return ISBN; }
-        public string GetTitle() { return Title; }
-        public string GetAuthor() { return Author; }
-        public DateTime GetPublication() { return Publication; }
-        public string GetGenre() { return Genre; }
-        public string GetDescription() { return Description; }
-
-
-        public void setBookID(string bookID) { this.BookID = bookID; }
-        public void SetISBN(string isbn) { this.ISBN = isbn; }
-        public void SetTitle(string title) { this.Title = title; }
-        public void SetAuthor(string author) { this.Author = author; }
-        public void SetPublication(DateTime publication) { this.Publication = publication; }
-        public void SetGenre(string genre) { this.Genre = genre; }
-        public void SetDescription(string description) { this.Description = description; }
-
-        public void AddBook(Book book)
+        public string ISBN
         {
-            books.Add(book);
-            foreach (var v in books)
-            {
-                Console.WriteLine("Book = {0}", v);
-            }
+            get { return _isbn; }
+            set { _isbn = value; }
         }
 
-        public void UpdateBook(Book book)
+        public string Title
         {
-            for (int i = 0; i < books.Count; i++)
-            {
-                if (books[i].BookID == book.BookID)
-                {
-                    books[i].SetISBN(book.ISBN);
-                    books[i].SetTitle(book.Title);
-                    books[i].SetAuthor(book.Author);
-                    books[i].SetPublication(book.Publication);
-                    books[i].SetGenre(book.Genre);
-                    books[i].SetDescription(book.Description);
-                    break;
-                }
-            }
+            get { return _title; }
+            set { _title = value; }
         }
 
-        public void RemoveBook(Book book)
+        public string Author
         {
-
+            get { return _author; }
+            set { _author = value; }
         }
 
-        public void FindBookById(Book book)
+        public DateTime Publication
         {
-
+            get { return _publication; }
+            set { _publication = value; }
         }
 
-        public List<Book> SearchByTitle(String tile)
+        public Genre Genre
         {
-            return books;
+            get { return _genre; }
+            set { _genre = value; }
         }
 
-        public List<Book> GetAllBooks()
+        public string Description
         {
-            return books;
+            get { return _description; }
+            set { _description = value; }
         }
 
+        public bool IsAvailable
+        {
+            get { return _isAvailable; }
+            set { _isAvailable = value; }
+        }
 
-
+        public Book(string bookId, string isbn, string title, string author, DateTime publication, Genre genre, string description, bool isAvailable)
+        {
+            _bookId = bookId;
+            _isbn = isbn;
+            _title = title;
+            _author = author;
+            _publication = publication;
+            _genre = genre;
+            _description = description;
+            _isAvailable = isAvailable;
+        }
     }
 }

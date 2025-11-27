@@ -1,46 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibrarySYS.Managers;
 
 namespace LibrarySYS
 {
     public partial class frmMainMenu : Form
     {
-        frmMainMenu parent;
+        private MemberManager _memberManager;
+        private BookManager _bookManager;
+        private LoanManager _loanManager;
+
+
         public frmMainMenu()
         {
             InitializeComponent();
+            _memberManager = new MemberManager();
+            _bookManager = new BookManager();
+            _loanManager = new LoanManager();
         }
-        public frmMainMenu(frmMainMenu parent)
+        private void ShowForm(Form form)
         {
-            this.parent = parent;
+            this.Hide();
+            form.Show();
+            form.FormClosed += (s, e) => this.Show();
         }
 
         private void mnuAddMember_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmAddMember frmAddMember = new frmAddMember();
-            frmAddMember.Show();
+            ShowForm(new frmAddMember(_memberManager));
         }
 
         private void mnuUpdateMember_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmUpdateMember frmUpdateMember = new frmUpdateMember();
-            frmUpdateMember.Show();
+            ShowForm(new frmUpdateMember(_memberManager));
         }
 
         private void mnuDeregisterMember_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmDeregisterMember frmDeregisterMember = new frmDeregisterMember();
-            frmDeregisterMember.Show();
+            ShowForm(new frmDeregisterMember(_memberManager));
         }
 
         private void munExit_Click(object sender, EventArgs e)
@@ -50,44 +47,32 @@ namespace LibrarySYS
 
         private void mnuAddBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmAddBook frmAddBook = new frmAddBook();
-            frmAddBook.Show();
+            ShowForm(new frmAddBook(_bookManager));
         }
 
         private void mnuUpdateBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmUpdateBook frmUpdateBook = new frmUpdateBook();
-            frmUpdateBook.Show();
+            ShowForm(new frmUpdateBook(_bookManager));
         }
 
         private void mnuRemoveBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmRemoveBook frmRemoveBook = new frmRemoveBook();
-            frmRemoveBook.Show();
+            ShowForm(new frmRemoveBook(_bookManager));
         }
 
         private void mnuReserveBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmReserveBook frmReserveBook = new frmReserveBook();
-            frmReserveBook.Show();
+            ShowForm(new frmReserveBook(_memberManager, _bookManager, _loanManager));
         }
 
         private void mnuCollectBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmCollectBook frmCollectBook = new frmCollectBook();
-            frmCollectBook.Show();
+            ShowForm(new frmCollectBook(_loanManager, _bookManager));
         }
 
         private void mnuReturnBook_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmReturnBook frmReturnBook = new frmReturnBook();
-            frmReturnBook.Show();
+            ShowForm(new frmReturnBook(_loanManager, _bookManager));
         }
     }
 }

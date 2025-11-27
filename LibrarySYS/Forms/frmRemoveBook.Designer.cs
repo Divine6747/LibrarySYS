@@ -34,10 +34,10 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.lblBook = new System.Windows.Forms.Label();
             this.pnlUpdateRegisteredMember = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearchBookId = new System.Windows.Forms.Button();
             this.txtSearchUpdateMemberID = new System.Windows.Forms.TextBox();
             this.lblBookID = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnRemoveBook = new System.Windows.Forms.Button();
             this.grpUpdateBook = new System.Windows.Forms.GroupBox();
             this.dtpPublication = new System.Windows.Forms.DateTimePicker();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -63,20 +63,21 @@
             this.mnuBack.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuBack.Margin = new System.Windows.Forms.Padding(3);
             this.mnuBack.Name = "mnuBack";
-            this.mnuBack.Size = new System.Drawing.Size(89, 31);
+            this.mnuBack.Size = new System.Drawing.Size(124, 44);
             this.mnuBack.Text = "BACK";
             this.mnuBack.Click += new System.EventHandler(this.mnuBack_Click);
             // 
             // mnuBackStrip
             // 
             this.mnuBackStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.mnuBackStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuBackStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuBackStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(869, 43);
+            this.mnuBackStrip.Size = new System.Drawing.Size(869, 56);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -87,7 +88,7 @@
             this.lblBook.Location = new System.Drawing.Point(39, 43);
             this.lblBook.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBook.Name = "lblBook";
-            this.lblBook.Size = new System.Drawing.Size(201, 33);
+            this.lblBook.Size = new System.Drawing.Size(266, 44);
             this.lblBook.TabIndex = 85;
             this.lblBook.Text = "Remove Book";
             // 
@@ -96,7 +97,7 @@
             this.pnlUpdateRegisteredMember.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlUpdateRegisteredMember.Controls.Add(this.btnSearch);
+            this.pnlUpdateRegisteredMember.Controls.Add(this.btnSearchBookId);
             this.pnlUpdateRegisteredMember.Controls.Add(this.txtSearchUpdateMemberID);
             this.pnlUpdateRegisteredMember.Controls.Add(this.lblBookID);
             this.pnlUpdateRegisteredMember.Location = new System.Drawing.Point(158, 79);
@@ -104,15 +105,16 @@
             this.pnlUpdateRegisteredMember.Size = new System.Drawing.Size(519, 37);
             this.pnlUpdateRegisteredMember.TabIndex = 109;
             // 
-            // btnSearch
+            // btnSearchBookId
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.btnSearch.Location = new System.Drawing.Point(331, 0);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(187, 39);
-            this.btnSearch.TabIndex = 94;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearchBookId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.btnSearchBookId.Location = new System.Drawing.Point(331, 0);
+            this.btnSearchBookId.Name = "btnSearchBookId";
+            this.btnSearchBookId.Size = new System.Drawing.Size(187, 39);
+            this.btnSearchBookId.TabIndex = 94;
+            this.btnSearchBookId.Text = "SEARCH";
+            this.btnSearchBookId.UseVisualStyleBackColor = false;
+            this.btnSearchBookId.Click += new System.EventHandler(this.btnSearchBookId_Click);
             // 
             // txtSearchUpdateMemberID
             // 
@@ -122,7 +124,7 @@
             this.txtSearchUpdateMemberID.Location = new System.Drawing.Point(147, 3);
             this.txtSearchUpdateMemberID.MaxLength = 7;
             this.txtSearchUpdateMemberID.Name = "txtSearchUpdateMemberID";
-            this.txtSearchUpdateMemberID.Size = new System.Drawing.Size(170, 32);
+            this.txtSearchUpdateMemberID.Size = new System.Drawing.Size(170, 42);
             this.txtSearchUpdateMemberID.TabIndex = 96;
             // 
             // lblBookID
@@ -131,21 +133,22 @@
             this.lblBookID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookID.Location = new System.Drawing.Point(3, 8);
             this.lblBookID.Name = "lblBookID";
-            this.lblBookID.Size = new System.Drawing.Size(138, 23);
+            this.lblBookID.Size = new System.Drawing.Size(192, 34);
             this.lblBookID.TabIndex = 95;
             this.lblBookID.Text = "Enter Book ID";
             // 
-            // btnSubmit
+            // btnRemoveBook
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(333, 586);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(202, 40);
-            this.btnSubmit.TabIndex = 111;
-            this.btnSubmit.Text = "Remove Book";
-            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnRemoveBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.btnRemoveBook.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveBook.Location = new System.Drawing.Point(333, 586);
+            this.btnRemoveBook.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnRemoveBook.Name = "btnRemoveBook";
+            this.btnRemoveBook.Size = new System.Drawing.Size(202, 40);
+            this.btnRemoveBook.TabIndex = 111;
+            this.btnRemoveBook.Text = "Remove Book";
+            this.btnRemoveBook.UseVisualStyleBackColor = false;
+            this.btnRemoveBook.Click += new System.EventHandler(this.btnRemoveBook_Click);
             // 
             // grpUpdateBook
             // 
@@ -177,7 +180,7 @@
             this.dtpPublication.MaxDate = new System.DateTime(5000, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.MinDate = new System.DateTime(1910, 1, 1, 0, 0, 0, 0);
             this.dtpPublication.Name = "dtpPublication";
-            this.dtpPublication.Size = new System.Drawing.Size(265, 36);
+            this.dtpPublication.Size = new System.Drawing.Size(265, 47);
             this.dtpPublication.TabIndex = 105;
             // 
             // txtDescription
@@ -200,7 +203,7 @@
             this.cboGenre.Location = new System.Drawing.Point(25, 295);
             this.cboGenre.Margin = new System.Windows.Forms.Padding(4);
             this.cboGenre.Name = "cboGenre";
-            this.cboGenre.Size = new System.Drawing.Size(282, 35);
+            this.cboGenre.Size = new System.Drawing.Size(282, 47);
             this.cboGenre.TabIndex = 104;
             // 
             // lblGenre
@@ -209,7 +212,7 @@
             this.lblGenre.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenre.Location = new System.Drawing.Point(21, 246);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(83, 27);
+            this.lblGenre.Size = new System.Drawing.Size(118, 40);
             this.lblGenre.TabIndex = 115;
             this.lblGenre.Text = "Genre";
             // 
@@ -220,7 +223,7 @@
             this.txtUpdateBookAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateBookAuthor.MaxLength = 35;
             this.txtUpdateBookAuthor.Name = "txtUpdateBookAuthor";
-            this.txtUpdateBookAuthor.Size = new System.Drawing.Size(282, 36);
+            this.txtUpdateBookAuthor.Size = new System.Drawing.Size(282, 47);
             this.txtUpdateBookAuthor.TabIndex = 103;
             // 
             // lblAuthor
@@ -229,7 +232,7 @@
             this.lblAuthor.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuthor.Location = new System.Drawing.Point(21, 139);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(87, 27);
+            this.lblAuthor.Size = new System.Drawing.Size(122, 40);
             this.lblAuthor.TabIndex = 114;
             this.lblAuthor.Text = "Author";
             // 
@@ -240,7 +243,7 @@
             this.txtUpdateISBN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateISBN.MaxLength = 10;
             this.txtUpdateISBN.Name = "txtUpdateISBN";
-            this.txtUpdateISBN.Size = new System.Drawing.Size(282, 36);
+            this.txtUpdateISBN.Size = new System.Drawing.Size(282, 47);
             this.txtUpdateISBN.TabIndex = 101;
             // 
             // lblISBN
@@ -249,7 +252,7 @@
             this.lblISBN.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblISBN.Location = new System.Drawing.Point(21, 32);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(59, 27);
+            this.lblISBN.Size = new System.Drawing.Size(84, 40);
             this.lblISBN.TabIndex = 112;
             this.lblISBN.Text = "ISBN";
             // 
@@ -260,7 +263,7 @@
             this.txtUpdateTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUpdateTitle.MaxLength = 25;
             this.txtUpdateTitle.Name = "txtUpdateTitle";
-            this.txtUpdateTitle.Size = new System.Drawing.Size(282, 36);
+            this.txtUpdateTitle.Size = new System.Drawing.Size(282, 47);
             this.txtUpdateTitle.TabIndex = 102;
             // 
             // lblTitle
@@ -269,7 +272,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(387, 32);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(58, 27);
+            this.lblTitle.Size = new System.Drawing.Size(74, 40);
             this.lblTitle.TabIndex = 111;
             this.lblTitle.Text = "Title";
             // 
@@ -279,7 +282,7 @@
             this.lblDescription.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(387, 246);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(140, 27);
+            this.lblDescription.Size = new System.Drawing.Size(196, 40);
             this.lblDescription.TabIndex = 109;
             this.lblDescription.Text = "Description";
             // 
@@ -289,18 +292,18 @@
             this.lblPublication.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPublication.Location = new System.Drawing.Point(387, 139);
             this.lblPublication.Name = "lblPublication";
-            this.lblPublication.Size = new System.Drawing.Size(142, 27);
+            this.lblPublication.Size = new System.Drawing.Size(196, 40);
             this.lblPublication.TabIndex = 110;
             this.lblPublication.Text = "Publication";
             // 
             // frmRemoveBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(869, 635);
             this.Controls.Add(this.grpUpdateBook);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnRemoveBook);
             this.Controls.Add(this.pnlUpdateRegisteredMember);
             this.Controls.Add(this.lblBook);
             this.Controls.Add(this.mnuBackStrip);
@@ -310,7 +313,6 @@
             this.Name = "frmRemoveBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remove Book";
-            this.Load += new System.EventHandler(this.frmRemoveBook_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.pnlUpdateRegisteredMember.ResumeLayout(false);
@@ -328,10 +330,10 @@
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.Label lblBook;
         private System.Windows.Forms.Panel pnlUpdateRegisteredMember;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnSearchBookId;
         private System.Windows.Forms.TextBox txtSearchUpdateMemberID;
         private System.Windows.Forms.Label lblBookID;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnRemoveBook;
         private System.Windows.Forms.GroupBox grpUpdateBook;
         private System.Windows.Forms.DateTimePicker dtpPublication;
         private System.Windows.Forms.TextBox txtDescription;

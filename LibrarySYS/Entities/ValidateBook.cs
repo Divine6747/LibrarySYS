@@ -1,48 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace LibrarySYS.Entities
 {
     internal class ValidateBook
     {
         public static bool ValidateBookData(
-            string isbn,string title, string author, string publication,string genre,string description,
-            out string errorMessage)
+            string isbn,string title, string author, string publication,string genre,string description)
         {
             // Title and Author rules 
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(author))
             {
-                errorMessage = "Title and Author cannot be empty.";
+                MessageBox.Show("Title and Author cannot be empty.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            // ISBN rules
             if (title.Any(char.IsDigit) || author.Any(char.IsDigit))
             {
-                errorMessage = "Title and Author cannot contain numbers.";
+                MessageBox.Show("Title and Author cannot contain numbers.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            // ISBN rules
+
+
             if (isbn.Length > 13 || isbn.Any(char.IsLetter) || isbn.Length < 13)
             {
-                errorMessage = "ISBN must be a 13-digit number.";
+                MessageBox.Show("ISBN must be a 13-digit number.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(publication))
+
+            if (publication == default)
             {
-                errorMessage = "Publication date cannot be empty.";
+                MessageBox.Show("Publication date is not valid.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+
             if (string.IsNullOrWhiteSpace(genre))
             {
-                errorMessage = "Genre cannot be empty.";
+                MessageBox.Show("Genre cannot be empty.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            } if (string.IsNullOrWhiteSpace(description)) {
-                errorMessage = "Description cannot be empty.";
+            } 
+            
+            if (string.IsNullOrWhiteSpace(description)) {
+                MessageBox.Show("Description cannot be empty.", "Validation Error",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            errorMessage = "";
             return true;
         }
     }

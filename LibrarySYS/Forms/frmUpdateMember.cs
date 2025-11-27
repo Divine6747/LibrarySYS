@@ -30,7 +30,11 @@ namespace LibrarySYS
 
         private void btMemberSearch_Click(object sender, EventArgs e)
         {
-            if (txtSearchMemberID.Text.ToString() == "A001")
+            if (lblUpdateMemerID.Text == null)
+            {
+
+            }
+            else
             {
                 grpRegisterMembers.Visible = true;
                 btnRegisterMemberSubmit.Visible = true;
