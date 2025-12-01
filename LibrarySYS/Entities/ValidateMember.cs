@@ -2,6 +2,10 @@
 
 internal class ValidateMember
 {
+    public static readonly int EIRCODE_LENGTH = 7;
+    public static readonly int PHONE_MIN_LENGTH = 7;
+    public static readonly int PHONE_MAX_LENGTH = 15;
+
     public static bool ValidateMemberData(
         string forename, string surname, string town,
         string eircode, string phone, string email,
@@ -40,14 +44,14 @@ internal class ValidateMember
         }
 
         //Eircode
-        if (eircode.Length != 7)
+        if (eircode.Length != EIRCODE_LENGTH)
         {
             errorMessage = "Eircode must be 7 characters long.";
             return false;
         }
 
         //Phone
-        if (phone.Length < 7 || phone.Length > 15 || phone.Any(char.IsLetter))
+        if (phone.Length < PHONE_MIN_LENGTH || phone.Length > PHONE_MAX_LENGTH || phone.Any(char.IsLetter))
         {
             errorMessage = "Phone number must be valid.";
             return false;
