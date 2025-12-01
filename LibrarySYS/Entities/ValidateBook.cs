@@ -10,7 +10,7 @@ namespace LibrarySYS.Entities
         private static readonly int ISBN_LENGTH = 13;
 
         public static bool ValidateBookData(
-            string isbn,string title, string author, string publication,string genre,string description)
+            string isbn,string title, string author, string publication,ComboBox genre,string description)
         {
             // Title and Author rules 
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(author))
@@ -44,7 +44,7 @@ namespace LibrarySYS.Entities
             }
 
 
-            if (string.IsNullOrWhiteSpace(genre))
+            if (genre.SelectedIndex < 0)
             {
                 MessageBox.Show("Genre cannot be empty.", "Validation Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);

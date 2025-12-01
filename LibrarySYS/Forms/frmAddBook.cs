@@ -27,21 +27,14 @@ namespace LibrarySYS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (cboGenre.SelectedIndex == -1)
-            {
-                MessageBox.Show("Please select a genre.", "Validation Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            string genre = cboGenre.SelectedItem.ToString();
 
             bool valid = ValidateBook.ValidateBookData(
                 txtISBN.Text,
                 txtTitle.Text,
                 txtAuthor.Text,
                 dtpPublication.Text,
-                genre,
+                cboGenre,
                 txtDescription.Text
             );
 
@@ -51,7 +44,7 @@ namespace LibrarySYS
                 return;
             }
 
-            Genre genreEnum = (Genre)Enum.Parse(typeof(Genre), genre);
+            Genre genreEnum = (Genre)Enum.Parse(typeof(Genre), cboGenre.SelectedIndex.ToString());
             string bookId = IdGenerator.GenerateBookId();
 
             Book newBook = new Book(

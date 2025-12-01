@@ -9,7 +9,7 @@ namespace LibrarySYS
     public partial class frmUpdateBook : Form
     {
         private BookManager _bookManager;
-        private Book _currentBook; 
+        private Book _currentBook;
         public frmUpdateBook(BookManager bookManager)
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace LibrarySYS
             _currentBook = null;
         }
 
-        private void btnSearchUpdateBookID_Click(object sender, EventArgs e)
+        private void btnSubmitUpdate_Click(object sender, EventArgs e)
         {
             if (_currentBook == null)
             {
@@ -72,6 +72,38 @@ namespace LibrarySYS
 
             MessageBox.Show($"Book '{_currentBook.Title}' updated successfully.");
             ResetUpdateFields();
+        }
+
+        private void btnSearchBookID_Click(object sender, EventArgs e)
+        {
+            string bookId = txtSearchUpdateMemberID.Text.Trim();
+            if (string.IsNullOrWhiteSpace(bookId))
+            {
+                MessageBox.Show("Please enter a Book ID to search.");
+                return;
+            }
+
+            _currentBook = _bookManager.FindBookById(bookId);
+
+            if (_currentBook == null)
+            {
+                MessageBox.Show("Book not found.");
+                grpUpdateBook.Visible = false;
+                btnSubmitUpdate.Visible = false;
+            }
+            else
+            {
+                // Populate controls
+                txtUpdateTitle.Text = _currentBook.Title;
+                txtUpdateBookAuthor.Text = _currentBook.Author;
+                txtUpdateISBN.Text = _currentBook.ISBN;
+                txtDescription.Text = _currentBook.Description;
+                cboGenre.SelectedItem = _currentBook.Genre;
+                dtpPublication.Value = _currentBook.Publication;
+
+                grpUpdateBook.Visible = true;
+                btnSubmitUpdate.Visible = true;
+            }
         }
     }
 }
