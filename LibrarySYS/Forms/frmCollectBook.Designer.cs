@@ -37,24 +37,24 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtLoanID = new System.Windows.Forms.TextBox();
             this.lblLoanID = new System.Windows.Forms.Label();
-            this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.dgvReservedBooks = new System.Windows.Forms.DataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMemberID = new System.Windows.Forms.Button();
+            this.btnSerachResID = new System.Windows.Forms.Button();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnSearchTitle = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.grpMemberInfo = new System.Windows.Forms.GroupBox();
             this.lblMemberInfo = new System.Windows.Forms.Label();
-            this.txtMemberId = new System.Windows.Forms.TextBox();
+            this.txtResId = new System.Windows.Forms.TextBox();
             this.lblMemberId = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mnuBackStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservedBooks)).BeginInit();
             this.grpMemberInfo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +129,7 @@
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtLoanID
             // 
@@ -156,26 +157,26 @@
             this.lblLoanID.Text = "Loan ID";
             this.lblLoanID.Visible = false;
             // 
-            // dgvResults
+            // dgvReservedBooks
             // 
-            this.dgvResults.AllowUserToAddRows = false;
-            this.dgvResults.AllowUserToDeleteRows = false;
-            this.dgvResults.AllowUserToResizeColumns = false;
-            this.dgvResults.AllowUserToResizeRows = false;
-            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvReservedBooks.AllowUserToAddRows = false;
+            this.dgvReservedBooks.AllowUserToDeleteRows = false;
+            this.dgvReservedBooks.AllowUserToResizeColumns = false;
+            this.dgvReservedBooks.AllowUserToResizeRows = false;
+            this.dgvReservedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservedBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
             this.colTitle,
             this.colAuthor,
             this.colLocation,
             this.ColStatus});
-            this.dgvResults.Location = new System.Drawing.Point(45, 220);
-            this.dgvResults.Name = "dgvResults";
-            this.dgvResults.ReadOnly = true;
-            this.dgvResults.RowHeadersWidth = 51;
-            this.dgvResults.Size = new System.Drawing.Size(790, 136);
-            this.dgvResults.TabIndex = 135;
-            this.dgvResults.Visible = false;
+            this.dgvReservedBooks.Location = new System.Drawing.Point(45, 220);
+            this.dgvReservedBooks.Name = "dgvReservedBooks";
+            this.dgvReservedBooks.ReadOnly = true;
+            this.dgvReservedBooks.RowHeadersWidth = 51;
+            this.dgvReservedBooks.Size = new System.Drawing.Size(790, 136);
+            this.dgvReservedBooks.TabIndex = 135;
+            this.dgvReservedBooks.Visible = false;
             // 
             // colId
             // 
@@ -222,17 +223,18 @@
             this.ColStatus.ReadOnly = true;
             this.ColStatus.Width = 50;
             // 
-            // btnMemberID
+            // btnSerachResID
             // 
-            this.btnMemberID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.btnMemberID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMemberID.Location = new System.Drawing.Point(254, -3);
-            this.btnMemberID.Margin = new System.Windows.Forms.Padding(10);
-            this.btnMemberID.Name = "btnMemberID";
-            this.btnMemberID.Size = new System.Drawing.Size(100, 30);
-            this.btnMemberID.TabIndex = 2;
-            this.btnMemberID.Text = "SEARCH";
-            this.btnMemberID.UseVisualStyleBackColor = false;
+            this.btnSerachResID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.btnSerachResID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSerachResID.Location = new System.Drawing.Point(254, -3);
+            this.btnSerachResID.Margin = new System.Windows.Forms.Padding(10);
+            this.btnSerachResID.Name = "btnSerachResID";
+            this.btnSerachResID.Size = new System.Drawing.Size(100, 30);
+            this.btnSerachResID.TabIndex = 2;
+            this.btnSerachResID.Text = "SEARCH";
+            this.btnSerachResID.UseVisualStyleBackColor = false;
+            this.btnSerachResID.Click += new System.EventHandler(this.btnSerachResID_Click);
             // 
             // txtTitle
             // 
@@ -295,15 +297,15 @@
             this.lblMemberInfo.TabIndex = 102;
             this.lblMemberInfo.Text = "0";
             // 
-            // txtMemberId
+            // txtResId
             // 
-            this.txtMemberId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberId.Location = new System.Drawing.Point(120, -1);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMemberId.MaxLength = 7;
-            this.txtMemberId.Name = "txtMemberId";
-            this.txtMemberId.Size = new System.Drawing.Size(114, 27);
-            this.txtMemberId.TabIndex = 1;
+            this.txtResId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResId.Location = new System.Drawing.Point(120, -1);
+            this.txtResId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtResId.MaxLength = 7;
+            this.txtResId.Name = "txtResId";
+            this.txtResId.Size = new System.Drawing.Size(114, 27);
+            this.txtResId.TabIndex = 1;
             // 
             // lblMemberId
             // 
@@ -318,9 +320,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnMemberID);
+            this.panel1.Controls.Add(this.btnSerachResID);
             this.panel1.Controls.Add(this.lblMemberId);
-            this.panel1.Controls.Add(this.txtMemberId);
+            this.panel1.Controls.Add(this.txtResId);
             this.panel1.Location = new System.Drawing.Point(45, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 27);
@@ -336,7 +338,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtLoanID);
             this.Controls.Add(this.lblLoanID);
-            this.Controls.Add(this.dgvResults);
+            this.Controls.Add(this.dgvReservedBooks);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.btnSearchTitle);
             this.Controls.Add(this.lblTitle);
@@ -350,7 +352,7 @@
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservedBooks)).EndInit();
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -369,14 +371,14 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtLoanID;
         private System.Windows.Forms.Label lblLoanID;
-        private System.Windows.Forms.DataGridView dgvResults;
-        private System.Windows.Forms.Button btnMemberID;
+        private System.Windows.Forms.DataGridView dgvReservedBooks;
+        private System.Windows.Forms.Button btnSerachResID;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnSearchTitle;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grpMemberInfo;
         private System.Windows.Forms.Label lblMemberInfo;
-        private System.Windows.Forms.TextBox txtMemberId;
+        private System.Windows.Forms.TextBox txtResId;
         private System.Windows.Forms.Label lblMemberId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;

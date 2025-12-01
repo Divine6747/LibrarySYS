@@ -32,25 +32,16 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBack = new System.Windows.Forms.ToolStripMenuItem();
             this.lblReturnBook = new System.Windows.Forms.Label();
-            this.dgvReturnCart = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtLoanID = new System.Windows.Forms.TextBox();
-            this.lblLoanID = new System.Windows.Forms.Label();
-            this.dgvResults = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMemberID = new System.Windows.Forms.Button();
             this.grpMemberInfo = new System.Windows.Forms.GroupBox();
             this.lblMemberInfo = new System.Windows.Forms.Label();
             this.txtMemberId = new System.Windows.Forms.TextBox();
             this.lblMemberId = new System.Windows.Forms.Label();
+            this.dgvLoanedBooks = new System.Windows.Forms.DataGridView();
             this.mnuBackStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReturnCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.grpMemberInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanedBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuBackStrip
@@ -62,7 +53,7 @@
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuBackStrip.Size = new System.Drawing.Size(884, 30);
+            this.mnuBackStrip.Size = new System.Drawing.Size(811, 30);
             this.mnuBackStrip.TabIndex = 77;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -88,34 +79,11 @@
             this.lblReturnBook.TabIndex = 142;
             this.lblReturnBook.Text = "Return Book";
             // 
-            // dgvReturnCart
-            // 
-            this.dgvReturnCart.AllowUserToAddRows = false;
-            this.dgvReturnCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReturnCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dgvReturnCart.Location = new System.Drawing.Point(388, 372);
-            this.dgvReturnCart.Name = "dgvReturnCart";
-            this.dgvReturnCart.ReadOnly = true;
-            this.dgvReturnCart.RowHeadersWidth = 51;
-            this.dgvReturnCart.Size = new System.Drawing.Size(450, 120);
-            this.dgvReturnCart.TabIndex = 158;
-            this.dgvReturnCart.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ReturnCart";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 400;
-            // 
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
             this.btnConfirm.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(739, 504);
+            this.btnConfirm.Location = new System.Drawing.Point(355, 384);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(10);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(100, 30);
@@ -123,88 +91,6 @@
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Visible = false;
-            // 
-            // txtLoanID
-            // 
-            this.txtLoanID.Enabled = false;
-            this.txtLoanID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoanID.Location = new System.Drawing.Point(121, 372);
-            this.txtLoanID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLoanID.MaxLength = 7;
-            this.txtLoanID.Name = "txtLoanID";
-            this.txtLoanID.Size = new System.Drawing.Size(200, 23);
-            this.txtLoanID.TabIndex = 156;
-            this.txtLoanID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLoanID.Visible = false;
-            // 
-            // lblLoanID
-            // 
-            this.lblLoanID.AutoSize = true;
-            this.lblLoanID.Enabled = false;
-            this.lblLoanID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoanID.Location = new System.Drawing.Point(46, 375);
-            this.lblLoanID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLoanID.Name = "lblLoanID";
-            this.lblLoanID.Size = new System.Drawing.Size(57, 17);
-            this.lblLoanID.TabIndex = 157;
-            this.lblLoanID.Text = "Loan ID";
-            this.lblLoanID.Visible = false;
-            // 
-            // dgvResults
-            // 
-            this.dgvResults.AllowUserToAddRows = false;
-            this.dgvResults.AllowUserToDeleteRows = false;
-            this.dgvResults.AllowUserToResizeColumns = false;
-            this.dgvResults.AllowUserToResizeRows = false;
-            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colId,
-            this.colTitle,
-            this.colAuthor,
-            this.colLocation});
-            this.dgvResults.Location = new System.Drawing.Point(49, 196);
-            this.dgvResults.Name = "dgvResults";
-            this.dgvResults.ReadOnly = true;
-            this.dgvResults.RowHeadersWidth = 51;
-            this.dgvResults.Size = new System.Drawing.Size(790, 136);
-            this.dgvResults.TabIndex = 147;
-            this.dgvResults.Visible = false;
-            // 
-            // colId
-            // 
-            this.colId.Frozen = true;
-            this.colId.HeaderText = "ID";
-            this.colId.MinimumWidth = 6;
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.Width = 125;
-            // 
-            // colTitle
-            // 
-            this.colTitle.Frozen = true;
-            this.colTitle.HeaderText = "Title";
-            this.colTitle.MinimumWidth = 6;
-            this.colTitle.Name = "colTitle";
-            this.colTitle.ReadOnly = true;
-            this.colTitle.Width = 210;
-            // 
-            // colAuthor
-            // 
-            this.colAuthor.Frozen = true;
-            this.colAuthor.HeaderText = "Author";
-            this.colAuthor.MinimumWidth = 6;
-            this.colAuthor.Name = "colAuthor";
-            this.colAuthor.ReadOnly = true;
-            this.colAuthor.Width = 200;
-            // 
-            // colLocation
-            // 
-            this.colLocation.Frozen = true;
-            this.colLocation.HeaderText = "Location";
-            this.colLocation.MinimumWidth = 6;
-            this.colLocation.Name = "colLocation";
-            this.colLocation.ReadOnly = true;
-            this.colLocation.Width = 200;
             // 
             // btnMemberID
             // 
@@ -226,7 +112,7 @@
             this.grpMemberInfo.Margin = new System.Windows.Forms.Padding(2);
             this.grpMemberInfo.Name = "grpMemberInfo";
             this.grpMemberInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.grpMemberInfo.Size = new System.Drawing.Size(400, 100);
+            this.grpMemberInfo.Size = new System.Drawing.Size(327, 100);
             this.grpMemberInfo.TabIndex = 150;
             this.grpMemberInfo.TabStop = false;
             this.grpMemberInfo.Text = "Member Info";
@@ -264,16 +150,22 @@
             this.lblMemberId.TabIndex = 149;
             this.lblMemberId.Text = "Member ID";
             // 
+            // dgvLoanedBooks
+            // 
+            this.dgvLoanedBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoanedBooks.Location = new System.Drawing.Point(111, 202);
+            this.dgvLoanedBooks.Name = "dgvLoanedBooks";
+            this.dgvLoanedBooks.Size = new System.Drawing.Size(588, 158);
+            this.dgvLoanedBooks.TabIndex = 151;
+            this.dgvLoanedBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoanedBooks_CellClick);
+            // 
             // frmReturnBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.dgvReturnCart);
+            this.ClientSize = new System.Drawing.Size(811, 436);
+            this.Controls.Add(this.dgvLoanedBooks);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.txtLoanID);
-            this.Controls.Add(this.lblLoanID);
-            this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.btnMemberID);
             this.Controls.Add(this.grpMemberInfo);
             this.Controls.Add(this.txtMemberId);
@@ -286,10 +178,9 @@
             this.Text = "Return Book";
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReturnCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.grpMemberInfo.ResumeLayout(false);
             this.grpMemberInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanedBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,20 +191,12 @@
         private System.Windows.Forms.MenuStrip mnuBackStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuBack;
         private System.Windows.Forms.Label lblReturnBook;
-        private System.Windows.Forms.DataGridView dgvReturnCart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox txtLoanID;
-        private System.Windows.Forms.Label lblLoanID;
-        private System.Windows.Forms.DataGridView dgvResults;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
         private System.Windows.Forms.Button btnMemberID;
         private System.Windows.Forms.GroupBox grpMemberInfo;
         private System.Windows.Forms.Label lblMemberInfo;
         private System.Windows.Forms.TextBox txtMemberId;
         private System.Windows.Forms.Label lblMemberId;
+        private System.Windows.Forms.DataGridView dgvLoanedBooks;
     }
 }

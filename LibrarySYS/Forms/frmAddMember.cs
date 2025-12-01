@@ -1,5 +1,9 @@
-﻿
+﻿using LibrarySYS.Entities;
+using LibrarySYS.Enums;
 using LibrarySYS.Helpers;
+using LibrarySYS.Interfaces;
+using LibrarySYS.Managers;
+using LibrarySystem.Entities;
 using System;
 using System.Windows.Forms;
 
@@ -7,73 +11,55 @@ namespace LibrarySYS
 {
     public partial class frmAddMember : Form
     {
-        frmMainMenu parent;
-        public frmAddMember()
+        private MemberManager _memberManager;
+        private string _generatedMemId;
+        public frmAddMember(MemberManager memberManager)
         {
             InitializeComponent();
-            this.parent = new frmMainMenu();
+            _memberManager = memberManager;
+
+            cboCounty.DataSource = Enum.GetValues(typeof(County));
+            cboCounty.SelectedIndex = -1;
         }
 
-        public frmAddMember(frmMainMenu parent)
-        {
-            this.parent = parent;
-        }
         
 
         private void mnuAddMemberBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            parent.Visible = true;
         }
         private void btnRegisterMemberSubmit_Click(object sender, EventArgs e)
         {
-            string error;
-
-            string memberid = IdGenerator.GenerateMemberId();
-
-            bool valid = ValidateMember.ValidateMemberData(
-                txtForeName.Text,
-                txtSurname.Text,
-                txtTown.Text,
-                txtEircode.Text,
-                txtPhone.Text,
-                txtEmail.Text,
-                out error
-            );
-
-            if (!valid)
+            if (string.IsNullOrWhiteSpace(txtForename.Text) ||
+                string.IsNullOrWhiteSpace(txtSurname.Text) ||
+                cboCounty.SelectedItem == null)
             {
-                MessageBox.Show(error, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else {
-                Member newMember = new Member(
-                   memberid,
-                   txtForeName.Text,
-                   txtSurname.Text,
-                   txtTown.Text,
-                   txtEircode.Text,
-                   txtPhone.Text,
-                   txtEmail.Text
-               );
 
-                newMember.AddMember(newMember);
+            Member newMember = new Member
+            {
+                Forename = txtForename.Text.Trim(),
+                Surname = txtSurname.Text.Trim(),
+                Town = (County)cboCounty.SelectedItem,
+                Eircode = txtEircode.Text.Trim(),
+                Email = txtEmail.Text.Trim(),
+                Phone = txtPhone.Text.Trim(),
+                IsActive = true
+            };
 
-            }
-            txtForeName.Clear();
+            _memberManager.AddMember(newMember);
+
+            MessageBox.Show($"Member {newMember.Forename} {newMember.Surname} added successfully.\nID: {newMember.MemberId}",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtForename.Clear();
             txtSurname.Clear();
-            txtTown.Clear();
+            cboCounty.SelectedIndex = -1;
             txtEircode.Clear();
-            txtPhone.Clear();
             txtEmail.Clear();
-
-
-
-        }
-
-        private void frmAddMember_Load(object sender, EventArgs e)
-        {
-
+            txtPhone.Clear();
         }
     }
 }

@@ -34,21 +34,21 @@
             this.lblUpdateRegisterMember = new System.Windows.Forms.Label();
             this.grpRegisterMembers = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboCounty = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtForename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.lblEircode = new System.Windows.Forms.Label();
-            this.lblTown = new System.Windows.Forms.Label();
-            this.btnRegisterMemberSubmit = new System.Windows.Forms.Button();
+            this.lblCounty = new System.Windows.Forms.Label();
+            this.btnUpdateMember = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btMemberSearch = new System.Windows.Forms.Button();
             this.txtSearchMemberID = new System.Windows.Forms.TextBox();
             this.lblUpdateMemerID = new System.Windows.Forms.Label();
@@ -108,23 +108,31 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboCounty);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtForename);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtSurname);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtEircode);
             this.panel1.Controls.Add(this.lblEircode);
-            this.panel1.Controls.Add(this.lblTown);
+            this.panel1.Controls.Add(this.lblCounty);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(733, 341);
             this.panel1.TabIndex = 0;
+            // 
+            // cboCounty
+            // 
+            this.cboCounty.FormattingEnabled = true;
+            this.cboCounty.Location = new System.Drawing.Point(26, 176);
+            this.cboCounty.Name = "cboCounty";
+            this.cboCounty.Size = new System.Drawing.Size(307, 29);
+            this.cboCounty.TabIndex = 125;
             // 
             // txtEmail
             // 
@@ -147,16 +155,16 @@
             this.lblEmail.TabIndex = 122;
             this.lblEmail.Text = "Email";
             // 
-            // textBox1
+            // txtPhone
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 283);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.MaxLength = 15;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 30);
-            this.textBox1.TabIndex = 115;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(24, 283);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.MaxLength = 15;
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(307, 30);
+            this.txtPhone.TabIndex = 115;
             // 
             // label1
             // 
@@ -168,16 +176,16 @@
             this.label1.TabIndex = 121;
             this.label1.Text = "Phone";
             // 
-            // textBox2
+            // txtForename
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(26, 67);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(307, 30);
-            this.textBox2.TabIndex = 110;
+            this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtForename.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtForename.Location = new System.Drawing.Point(26, 67);
+            this.txtForename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtForename.MaxLength = 20;
+            this.txtForename.Name = "txtForename";
+            this.txtForename.Size = new System.Drawing.Size(307, 30);
+            this.txtForename.TabIndex = 110;
             // 
             // label2
             // 
@@ -189,16 +197,16 @@
             this.label2.TabIndex = 120;
             this.label2.Text = "Forename";
             // 
-            // textBox3
+            // txtSurname
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(409, 67);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.MaxLength = 20;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(307, 30);
-            this.textBox3.TabIndex = 111;
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurname.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Location = new System.Drawing.Point(409, 67);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSurname.MaxLength = 20;
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(307, 30);
+            this.txtSurname.TabIndex = 111;
             // 
             // label3
             // 
@@ -232,26 +240,27 @@
             this.lblEircode.TabIndex = 118;
             this.lblEircode.Text = "Eircode";
             // 
-            // lblTown
+            // lblCounty
             // 
-            this.lblTown.AutoSize = true;
-            this.lblTown.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTown.Location = new System.Drawing.Point(22, 125);
-            this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(58, 22);
-            this.lblTown.TabIndex = 117;
-            this.lblTown.Text = "Town";
+            this.lblCounty.AutoSize = true;
+            this.lblCounty.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounty.Location = new System.Drawing.Point(22, 125);
+            this.lblCounty.Name = "lblCounty";
+            this.lblCounty.Size = new System.Drawing.Size(79, 22);
+            this.lblCounty.TabIndex = 117;
+            this.lblCounty.Text = "County";
             // 
-            // btnRegisterMemberSubmit
+            // btnUpdateMember
             // 
-            this.btnRegisterMemberSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.btnRegisterMemberSubmit.Location = new System.Drawing.Point(346, 511);
-            this.btnRegisterMemberSubmit.Name = "btnRegisterMemberSubmit";
-            this.btnRegisterMemberSubmit.Size = new System.Drawing.Size(100, 43);
-            this.btnRegisterMemberSubmit.TabIndex = 99;
-            this.btnRegisterMemberSubmit.Text = "Update";
-            this.btnRegisterMemberSubmit.UseVisualStyleBackColor = false;
-            this.btnRegisterMemberSubmit.Visible = false;
+            this.btnUpdateMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.btnUpdateMember.Location = new System.Drawing.Point(346, 511);
+            this.btnUpdateMember.Name = "btnUpdateMember";
+            this.btnUpdateMember.Size = new System.Drawing.Size(100, 43);
+            this.btnUpdateMember.TabIndex = 99;
+            this.btnUpdateMember.Text = "Update";
+            this.btnUpdateMember.UseVisualStyleBackColor = false;
+            this.btnUpdateMember.Visible = false;
+            this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
             // label4
             // 
@@ -276,14 +285,6 @@
             this.lblMemberID.TabIndex = 100;
             this.lblMemberID.Tag = " ";
             this.lblMemberID.Text = "Member ID:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(26, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(307, 29);
-            this.comboBox1.TabIndex = 125;
             // 
             // btMemberSearch
             // 
@@ -337,7 +338,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.grpRegisterMembers);
-            this.Controls.Add(this.btnRegisterMemberSubmit);
+            this.Controls.Add(this.btnUpdateMember);
             this.Controls.Add(this.lblUpdateRegisterMember);
             this.Controls.Add(this.mnuBackStrip);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -368,17 +369,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.Label lblEircode;
-        private System.Windows.Forms.Label lblTown;
-        private System.Windows.Forms.Button btnRegisterMemberSubmit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblCounty;
+        private System.Windows.Forms.Button btnUpdateMember;
+        private System.Windows.Forms.ComboBox cboCounty;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.Button btMemberSearch;

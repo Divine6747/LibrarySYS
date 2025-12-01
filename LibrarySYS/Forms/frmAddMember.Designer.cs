@@ -35,18 +35,18 @@
             this.btnRegisterMemberSubmit = new System.Windows.Forms.Button();
             this.grpRegisterMembers = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboCounty = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtForeName = new System.Windows.Forms.TextBox();
+            this.txtForename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.lblEircode = new System.Windows.Forms.Label();
-            this.txtTown = new System.Windows.Forms.TextBox();
-            this.lblTown = new System.Windows.Forms.Label();
+            this.lblCounty = new System.Windows.Forms.Label();
             this.lblMemberID = new System.Windows.Forms.Label();
             this.txtMemberID = new System.Windows.Forms.Label();
             this.mnuBackStrip.SuspendLayout();
@@ -113,23 +113,34 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboCounty);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtForeName);
+            this.panel1.Controls.Add(this.txtForename);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtSurname);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtEircode);
             this.panel1.Controls.Add(this.lblEircode);
-            this.panel1.Controls.Add(this.txtTown);
-            this.panel1.Controls.Add(this.lblTown);
+            this.panel1.Controls.Add(this.lblCounty);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(850, 335);
             this.panel1.TabIndex = 0;
+            // 
+            // cboCounty
+            // 
+            this.cboCounty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCounty.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCounty.FormattingEnabled = true;
+            this.cboCounty.Location = new System.Drawing.Point(50, 157);
+            this.cboCounty.Margin = new System.Windows.Forms.Padding(4);
+            this.cboCounty.Name = "cboCounty";
+            this.cboCounty.Size = new System.Drawing.Size(344, 29);
+            this.cboCounty.TabIndex = 126;
             // 
             // txtEmail
             // 
@@ -173,16 +184,16 @@
             this.label1.TabIndex = 121;
             this.label1.Text = "Phone";
             // 
-            // txtForeName
+            // txtForename
             // 
-            this.txtForeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtForeName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtForeName.Location = new System.Drawing.Point(50, 57);
-            this.txtForeName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtForeName.MaxLength = 20;
-            this.txtForeName.Name = "txtForeName";
-            this.txtForeName.Size = new System.Drawing.Size(344, 30);
-            this.txtForeName.TabIndex = 110;
+            this.txtForename.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtForename.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtForename.Location = new System.Drawing.Point(50, 57);
+            this.txtForename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtForename.MaxLength = 20;
+            this.txtForename.Name = "txtForename";
+            this.txtForename.Size = new System.Drawing.Size(344, 30);
+            this.txtForename.TabIndex = 110;
             // 
             // label2
             // 
@@ -237,26 +248,15 @@
             this.lblEircode.TabIndex = 118;
             this.lblEircode.Text = "Eircode";
             // 
-            // txtTown
+            // lblCounty
             // 
-            this.txtTown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTown.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTown.Location = new System.Drawing.Point(49, 156);
-            this.txtTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTown.MaxLength = 15;
-            this.txtTown.Name = "txtTown";
-            this.txtTown.Size = new System.Drawing.Size(344, 30);
-            this.txtTown.TabIndex = 113;
-            // 
-            // lblTown
-            // 
-            this.lblTown.AutoSize = true;
-            this.lblTown.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTown.Location = new System.Drawing.Point(44, 115);
-            this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(58, 22);
-            this.lblTown.TabIndex = 117;
-            this.lblTown.Text = "Town";
+            this.lblCounty.AutoSize = true;
+            this.lblCounty.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounty.Location = new System.Drawing.Point(44, 115);
+            this.lblCounty.Name = "lblCounty";
+            this.lblCounty.Size = new System.Drawing.Size(79, 22);
+            this.lblCounty.TabIndex = 117;
+            this.lblCounty.Text = "County";
             // 
             // lblMemberID
             // 
@@ -300,7 +300,6 @@
             this.Name = "frmAddMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Member";
-            this.Load += new System.EventHandler(this.frmAddMember_Load);
             this.mnuBackStrip.ResumeLayout(false);
             this.mnuBackStrip.PerformLayout();
             this.grpRegisterMembers.ResumeLayout(false);
@@ -323,15 +322,15 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtForeName;
+        private System.Windows.Forms.TextBox txtForename;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.Label lblEircode;
-        private System.Windows.Forms.TextBox txtTown;
-        private System.Windows.Forms.Label lblTown;
+        private System.Windows.Forms.Label lblCounty;
         private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.Label txtMemberID;
+        private System.Windows.Forms.ComboBox cboCounty;
     }
 }
