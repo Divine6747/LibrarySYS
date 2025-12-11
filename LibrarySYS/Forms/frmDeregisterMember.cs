@@ -13,13 +13,11 @@ namespace LibrarySYS
         private MemberManager _memberManager;
         private Member _currentMember;
 
-
         public frmDeregisterMember(MemberManager memberManager)
         {
             InitializeComponent();
             _memberManager = memberManager;
         }
-
 
         private void frmUpdateMember_Load(object sender, EventArgs e)
         {
@@ -50,12 +48,13 @@ namespace LibrarySYS
             }
             else
             {
-                txtForename.Text = _currentMember.Forename;
-                txtSurname.Text = _currentMember.Surname;
-                txtEircode.Text = _currentMember.Eircode;
-                txtEmail.Text = _currentMember.Email;
-                cboCounty.SelectedItem = _currentMember.Town;
-                txtPhone.Text = _currentMember.Phone;
+                // Display member details in labels instead of textboxes
+                lblForename.Text = _currentMember.Forename;
+                lblSurname.Text = _currentMember.Surname;
+                lblEircode.Text = _currentMember.Eircode;
+                lblEmail.Text = _currentMember.Email;
+                lblCounty.Text = _currentMember.Town.ToString();
+                lblPhone.Text = _currentMember.Phone;
 
                 grpDeregisterMember.Visible = true;
                 btnDegeristerMemberConfirm.Visible = true;
@@ -75,12 +74,14 @@ namespace LibrarySYS
             _memberManager.DeregisterMember(_currentMember.MemberId);
             MessageBox.Show($"Member {_currentMember.Forename} {_currentMember.Surname} has been deactivated.");
 
-            txtForename.Clear();
-            txtSurname.Clear();
-            cboCounty.SelectedIndex = -1;
-            txtEircode.Clear();
-            txtPhone.Clear();
-            txtEmail.Clear();
+            lblForename.Text = "";
+            lblSurname.Text = "";
+            lblEircode.Text = "";
+            lblEmail.Text = "";
+            lblCounty.Text = "";
+            lblPhone.Text = "";
+
+            txtSearchDegisterMemberID.Clear();
         }
 
         private void mnuDeregisterMemberBack_Click(object sender, EventArgs e)

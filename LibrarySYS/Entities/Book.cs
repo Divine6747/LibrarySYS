@@ -71,7 +71,7 @@ namespace LibrarySYS.Entities
             _publication = publication;
             _genre = genre;
             _description = description;
-            _isAvailable = isAvailable;
+            _isAvailable = isAvailable = true;
         }
     }
 }

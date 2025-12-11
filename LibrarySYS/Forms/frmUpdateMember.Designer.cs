@@ -47,8 +47,6 @@
             this.lblEircode = new System.Windows.Forms.Label();
             this.lblCounty = new System.Windows.Forms.Label();
             this.btnUpdateMember = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblMemberID = new System.Windows.Forms.Label();
             this.btMemberSearch = new System.Windows.Forms.Button();
             this.txtSearchMemberID = new System.Windows.Forms.TextBox();
             this.lblUpdateMemerID = new System.Windows.Forms.Label();
@@ -262,30 +260,6 @@
             this.btnUpdateMember.Visible = false;
             this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.label4.Location = new System.Drawing.Point(723, 110);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 22);
-            this.label4.TabIndex = 101;
-            this.label4.Text = "000";
-            // 
-            // lblMemberID
-            // 
-            this.lblMemberID.AutoSize = true;
-            this.lblMemberID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberID.Location = new System.Drawing.Point(603, 110);
-            this.lblMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMemberID.Name = "lblMemberID";
-            this.lblMemberID.Size = new System.Drawing.Size(116, 22);
-            this.lblMemberID.TabIndex = 100;
-            this.lblMemberID.Tag = " ";
-            this.lblMemberID.Text = "Member ID:";
-            // 
             // btMemberSearch
             // 
             this.btMemberSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
@@ -335,8 +309,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(793, 562);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.grpRegisterMembers);
             this.Controls.Add(this.btnUpdateMember);
             this.Controls.Add(this.lblUpdateRegisterMember);
@@ -380,8 +352,6 @@
         private System.Windows.Forms.Label lblCounty;
         private System.Windows.Forms.Button btnUpdateMember;
         private System.Windows.Forms.ComboBox cboCounty;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblMemberID;
         private System.Windows.Forms.Button btMemberSearch;
         private System.Windows.Forms.TextBox txtSearchMemberID;
         private System.Windows.Forms.Label lblUpdateMemerID;

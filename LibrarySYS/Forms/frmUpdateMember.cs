@@ -22,7 +22,7 @@ namespace LibrarySYS
         private void frmUpdateMember_Load(object sender, EventArgs e)
         {
             cboCounty.DataSource = Enum.GetValues(typeof(County));
-            cboCounty.SelectedIndex = 0;
+            cboCounty.SelectedIndex = -1;
         }
 
         private void mnuUpdateMemberBack_Click_1(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace LibrarySYS
             string memberId = txtSearchMemberID.Text.Trim();
             if (string.IsNullOrWhiteSpace(memberId))
             {
-                MessageBox.Show("Please enter a Member ID to search.");
+                MessageBox.Show("Please enter a Member ID to search.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -43,7 +43,7 @@ namespace LibrarySYS
 
             if (_currentMember == null)
             {
-                MessageBox.Show("Member not found.");
+                MessageBox.Show("Member not found.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 grpRegisterMembers.Visible = false;
                 btnUpdateMember.Visible = false;
             }
@@ -63,24 +63,45 @@ namespace LibrarySYS
 
         private void btnUpdateMember_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtForename.Text) ||
-                string.IsNullOrWhiteSpace(txtSurname.Text) ||
-                cboCounty.SelectedItem == null)
+            string forename = txtForename.Text.Trim();
+            string surname = txtSurname.Text.Trim();
+            string town = cboCounty.SelectedItem?.ToString() ?? "";
+            string eircode = txtEircode.Text.Trim();
+            string phone = txtPhone.Text.Trim();
+            string email = txtEmail.Text.Trim();
+
+            if (!ValidateMember.ValidateMemberData(forename, surname, town, eircode, phone, email, out string errorMessage))
             {
-                MessageBox.Show("Please fill in all required fields.");
+                MessageBox.Show(errorMessage, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            _currentMember.Forename = txtForename.Text.Trim();
-            _currentMember.Surname = txtSurname.Text.Trim();
-            _currentMember.Eircode = txtEircode.Text.Trim();
-            _currentMember.Email = txtEmail.Text.Trim();
-            _currentMember.Phone = txtPhone.Text.Trim();
-            _currentMember.Town = (County)cboCounty.SelectedItem;
+            _currentMember.Forename = forename;
+            _currentMember.Surname = surname;
+            _currentMember.Eircode = eircode;
+            _currentMember.Email = email;
+            _currentMember.Phone = phone;
+            _currentMember.Town = (County)Enum.Parse(typeof(County), town);
 
             _memberManager.UpdateMember(_currentMember);
 
             MessageBox.Show("Member updated successfully.");
+
+            ClearForm();
+        }
+        private void ClearForm()
+        {
+            txtSearchMemberID.Clear();
+            txtForename.Clear();
+            txtSurname.Clear();
+            cboCounty.SelectedIndex = -1;
+            txtEircode.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            grpRegisterMembers.Visible = false;
+            btnUpdateMember.Visible = false;
+
+            txtSearchMemberID.Focus();
         }
     }
 }

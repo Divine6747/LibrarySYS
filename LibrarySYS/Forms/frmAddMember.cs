@@ -12,7 +12,6 @@ namespace LibrarySYS
     public partial class frmAddMember : Form
     {
         private MemberManager _memberManager;
-        private string _generatedMemId;
         public frmAddMember(MemberManager memberManager)
         {
             InitializeComponent();
@@ -22,30 +21,33 @@ namespace LibrarySYS
             cboCounty.SelectedIndex = -1;
         }
 
-        
-
         private void mnuAddMemberBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         private void btnRegisterMemberSubmit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtForename.Text) ||
-                string.IsNullOrWhiteSpace(txtSurname.Text) ||
-                cboCounty.SelectedItem == null)
+            string forename = txtForename.Text.Trim();
+            string surname = txtSurname.Text.Trim();
+            string town = cboCounty.SelectedItem?.ToString() ?? "";
+            string eircode = txtEircode.Text.Trim();
+            string phone = txtPhone.Text.Trim();
+            string email = txtEmail.Text.Trim();
+
+            if (!ValidateMember.ValidateMemberData(forename, surname, town, eircode, phone, email, out string errorMessage))
             {
-                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(errorMessage, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             Member newMember = new Member
             {
-                Forename = txtForename.Text.Trim(),
-                Surname = txtSurname.Text.Trim(),
-                Town = (County)cboCounty.SelectedItem,
-                Eircode = txtEircode.Text.Trim(),
-                Email = txtEmail.Text.Trim(),
-                Phone = txtPhone.Text.Trim(),
+                Forename = forename,
+                Surname = surname,
+                Town = (County)Enum.Parse(typeof(County), town),
+                Eircode =  eircode,
+                Email = email,
+                Phone = phone,
                 IsActive = true
             };
 
@@ -54,12 +56,18 @@ namespace LibrarySYS
             MessageBox.Show($"Member {newMember.Forename} {newMember.Surname} added successfully.\nID: {newMember.MemberId}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            ClearForm();
+        }
+        private void ClearForm()
+        {
             txtForename.Clear();
             txtSurname.Clear();
             cboCounty.SelectedIndex = -1;
             txtEircode.Clear();
             txtEmail.Clear();
             txtPhone.Clear();
+
+            txtForename.Focus();
         }
     }
 }

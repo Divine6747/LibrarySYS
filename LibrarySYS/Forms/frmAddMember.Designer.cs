@@ -47,8 +47,6 @@
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.lblEircode = new System.Windows.Forms.Label();
             this.lblCounty = new System.Windows.Forms.Label();
-            this.lblMemberID = new System.Windows.Forms.Label();
-            this.txtMemberID = new System.Windows.Forms.Label();
             this.mnuBackStrip.SuspendLayout();
             this.grpRegisterMembers.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -258,38 +256,12 @@
             this.lblCounty.TabIndex = 117;
             this.lblCounty.Text = "County";
             // 
-            // lblMemberID
-            // 
-            this.lblMemberID.AutoSize = true;
-            this.lblMemberID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemberID.Location = new System.Drawing.Point(721, 71);
-            this.lblMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMemberID.Name = "lblMemberID";
-            this.lblMemberID.Size = new System.Drawing.Size(116, 22);
-            this.lblMemberID.TabIndex = 94;
-            this.lblMemberID.Tag = " ";
-            this.lblMemberID.Text = "Member ID:";
-            // 
-            // txtMemberID
-            // 
-            this.txtMemberID.AutoSize = true;
-            this.txtMemberID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.txtMemberID.Location = new System.Drawing.Point(841, 71);
-            this.txtMemberID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(43, 22);
-            this.txtMemberID.TabIndex = 95;
-            this.txtMemberID.Text = "000";
-            // 
             // frmAddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(918, 538);
-            this.Controls.Add(this.txtMemberID);
-            this.Controls.Add(this.lblMemberID);
             this.Controls.Add(this.grpRegisterMembers);
             this.Controls.Add(this.lblRegisterMember);
             this.Controls.Add(this.mnuBackStrip);
@@ -329,8 +301,6 @@
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.Label lblEircode;
         private System.Windows.Forms.Label lblCounty;
-        private System.Windows.Forms.Label lblMemberID;
-        private System.Windows.Forms.Label txtMemberID;
         private System.Windows.Forms.ComboBox cboCounty;
     }
 }

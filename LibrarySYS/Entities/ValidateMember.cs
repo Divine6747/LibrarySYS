@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-internal class ValidateMember
+public class ValidateMember
 {
     public static readonly int EIRCODE_LENGTH = 7;
     public static readonly int PHONE_MIN_LENGTH = 7;
