@@ -17,7 +17,10 @@ namespace LibrarySYS.Managers
 
         public void AddBook(Book book)
         {
-            book.BookId = IdGenerator.GenerateBookId();
+            if (string.IsNullOrEmpty(book.BookId))
+            {
+                book.BookId = IdGenerator.GenerateBookId();
+            }
             _books.Add(book);
         }
 

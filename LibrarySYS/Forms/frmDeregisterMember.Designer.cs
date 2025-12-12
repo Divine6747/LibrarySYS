@@ -33,19 +33,8 @@
             this.mnuBackStrip = new System.Windows.Forms.MenuStrip();
             this.lblDeregisterMember = new System.Windows.Forms.Label();
             this.grpDeregisterMember = new System.Windows.Forms.GroupBox();
-            this.lblCounty = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblForename = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblEircode = new System.Windows.Forms.Label();
+            this.lblDeregisterMemberDetails = new System.Windows.Forms.Label();
             this.btnDegeristerMemberConfirm = new System.Windows.Forms.Button();
-            this.lblForenameValue = new System.Windows.Forms.Label();
-            this.lblCountyValue = new System.Windows.Forms.Label();
-            this.lblPhoneValue = new System.Windows.Forms.Label();
-            this.lblEmailValue = new System.Windows.Forms.Label();
-            this.lblSurnameValue = new System.Windows.Forms.Label();
-            this.lblEircodelValue = new System.Windows.Forms.Label();
             this.pnlUpdateRegisteredMember = new System.Windows.Forms.Panel();
             this.btnSearchDeregisteredMember = new System.Windows.Forms.Button();
             this.txtSearchDegisterMemberID = new System.Windows.Forms.TextBox();
@@ -69,13 +58,14 @@
             // mnuBackStrip
             // 
             this.mnuBackStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.mnuBackStrip.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuBackStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuBackStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuDeregisterMemberBack});
             this.mnuBackStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuBackStrip.Name = "mnuBackStrip";
             this.mnuBackStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.mnuBackStrip.Size = new System.Drawing.Size(826, 38);
+            this.mnuBackStrip.Size = new System.Drawing.Size(585, 38);
             this.mnuBackStrip.TabIndex = 75;
             this.mnuBackStrip.Text = "Back";
             // 
@@ -92,164 +82,38 @@
             // 
             // grpDeregisterMember
             // 
-            this.grpDeregisterMember.Controls.Add(this.lblEmailValue);
-            this.grpDeregisterMember.Controls.Add(this.lblSurnameValue);
-            this.grpDeregisterMember.Controls.Add(this.lblEircodelValue);
-            this.grpDeregisterMember.Controls.Add(this.lblPhoneValue);
-            this.grpDeregisterMember.Controls.Add(this.lblCountyValue);
-            this.grpDeregisterMember.Controls.Add(this.lblForenameValue);
-            this.grpDeregisterMember.Controls.Add(this.lblCounty);
-            this.grpDeregisterMember.Controls.Add(this.lblEmail);
-            this.grpDeregisterMember.Controls.Add(this.lblPhone);
-            this.grpDeregisterMember.Controls.Add(this.lblForename);
-            this.grpDeregisterMember.Controls.Add(this.lblSurname);
-            this.grpDeregisterMember.Controls.Add(this.lblEircode);
-            this.grpDeregisterMember.Location = new System.Drawing.Point(28, 130);
+            this.grpDeregisterMember.Controls.Add(this.lblDeregisterMemberDetails);
+            this.grpDeregisterMember.Location = new System.Drawing.Point(35, 130);
             this.grpDeregisterMember.Name = "grpDeregisterMember";
-            this.grpDeregisterMember.Size = new System.Drawing.Size(682, 253);
+            this.grpDeregisterMember.Size = new System.Drawing.Size(515, 275);
             this.grpDeregisterMember.TabIndex = 86;
             this.grpDeregisterMember.TabStop = false;
             this.grpDeregisterMember.Text = "Member Information";
             this.grpDeregisterMember.Visible = false;
             // 
-            // lblCounty
+            // lblDeregisterMemberDetails
             // 
-            this.lblCounty.AutoSize = true;
-            this.lblCounty.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounty.Location = new System.Drawing.Point(26, 102);
-            this.lblCounty.Name = "lblCounty";
-            this.lblCounty.Size = new System.Drawing.Size(84, 22);
-            this.lblCounty.TabIndex = 141;
-            this.lblCounty.Text = "County:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(396, 169);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(61, 22);
-            this.lblEmail.TabIndex = 138;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(26, 169);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(74, 22);
-            this.lblPhone.TabIndex = 137;
-            this.lblPhone.Text = "Phone:";
-            // 
-            // lblForename
-            // 
-            this.lblForename.AutoSize = true;
-            this.lblForename.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForename.Location = new System.Drawing.Point(22, 35);
-            this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(108, 22);
-            this.lblForename.TabIndex = 136;
-            this.lblForename.Text = "Forename:";
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.Location = new System.Drawing.Point(395, 35);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(96, 22);
-            this.lblSurname.TabIndex = 135;
-            this.lblSurname.Text = "Surname:";
-            // 
-            // lblEircode
-            // 
-            this.lblEircode.AutoSize = true;
-            this.lblEircode.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEircode.Location = new System.Drawing.Point(395, 102);
-            this.lblEircode.Name = "lblEircode";
-            this.lblEircode.Size = new System.Drawing.Size(83, 22);
-            this.lblEircode.TabIndex = 134;
-            this.lblEircode.Text = "Eircode:";
+            this.lblDeregisterMemberDetails.AutoSize = true;
+            this.lblDeregisterMemberDetails.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeregisterMemberDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
+            this.lblDeregisterMemberDetails.Location = new System.Drawing.Point(167, 23);
+            this.lblDeregisterMemberDetails.Name = "lblDeregisterMemberDetails";
+            this.lblDeregisterMemberDetails.Size = new System.Drawing.Size(250, 22);
+            this.lblDeregisterMemberDetails.TabIndex = 142;
+            this.lblDeregisterMemberDetails.Text = "NO MEMBER ID PROVIDED";
             // 
             // btnDegeristerMemberConfirm
             // 
             this.btnDegeristerMemberConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
             this.btnDegeristerMemberConfirm.CausesValidation = false;
             this.btnDegeristerMemberConfirm.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDegeristerMemberConfirm.Location = new System.Drawing.Point(316, 437);
+            this.btnDegeristerMemberConfirm.Location = new System.Drawing.Point(231, 411);
             this.btnDegeristerMemberConfirm.Name = "btnDegeristerMemberConfirm";
-            this.btnDegeristerMemberConfirm.Size = new System.Drawing.Size(151, 43);
+            this.btnDegeristerMemberConfirm.Size = new System.Drawing.Size(120, 36);
             this.btnDegeristerMemberConfirm.TabIndex = 93;
             this.btnDegeristerMemberConfirm.Text = "Derigister";
             this.btnDegeristerMemberConfirm.UseVisualStyleBackColor = false;
             this.btnDegeristerMemberConfirm.Click += new System.EventHandler(this.btnDegeristerMemberConfirm_Click);
-            // 
-            // lblForenameValue
-            // 
-            this.lblForenameValue.AutoSize = true;
-            this.lblForenameValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForenameValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblForenameValue.Location = new System.Drawing.Point(177, 35);
-            this.lblForenameValue.Name = "lblForenameValue";
-            this.lblForenameValue.Size = new System.Drawing.Size(103, 22);
-            this.lblForenameValue.TabIndex = 142;
-            this.lblForenameValue.Text = "Forename";
-            // 
-            // lblCountyValue
-            // 
-            this.lblCountyValue.AutoSize = true;
-            this.lblCountyValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountyValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblCountyValue.Location = new System.Drawing.Point(177, 102);
-            this.lblCountyValue.Name = "lblCountyValue";
-            this.lblCountyValue.Size = new System.Drawing.Size(79, 22);
-            this.lblCountyValue.TabIndex = 143;
-            this.lblCountyValue.Text = "County";
-            // 
-            // lblPhoneValue
-            // 
-            this.lblPhoneValue.AutoSize = true;
-            this.lblPhoneValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblPhoneValue.Location = new System.Drawing.Point(177, 169);
-            this.lblPhoneValue.Name = "lblPhoneValue";
-            this.lblPhoneValue.Size = new System.Drawing.Size(69, 22);
-            this.lblPhoneValue.TabIndex = 144;
-            this.lblPhoneValue.Text = "Phone";
-            // 
-            // lblEmailValue
-            // 
-            this.lblEmailValue.AutoSize = true;
-            this.lblEmailValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblEmailValue.Location = new System.Drawing.Point(541, 169);
-            this.lblEmailValue.Name = "lblEmailValue";
-            this.lblEmailValue.Size = new System.Drawing.Size(56, 22);
-            this.lblEmailValue.TabIndex = 147;
-            this.lblEmailValue.Text = "Email";
-            // 
-            // lblSurnameValue
-            // 
-            this.lblSurnameValue.AutoSize = true;
-            this.lblSurnameValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurnameValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblSurnameValue.Location = new System.Drawing.Point(541, 35);
-            this.lblSurnameValue.Name = "lblSurnameValue";
-            this.lblSurnameValue.Size = new System.Drawing.Size(91, 22);
-            this.lblSurnameValue.TabIndex = 146;
-            this.lblSurnameValue.Text = "Surname";
-            // 
-            // lblEircodelValue
-            // 
-            this.lblEircodelValue.AutoSize = true;
-            this.lblEircodelValue.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEircodelValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(118)))), ((int)(((byte)(129)))));
-            this.lblEircodelValue.Location = new System.Drawing.Point(541, 102);
-            this.lblEircodelValue.Name = "lblEircodelValue";
-            this.lblEircodelValue.Size = new System.Drawing.Size(78, 22);
-            this.lblEircodelValue.TabIndex = 145;
-            this.lblEircodelValue.Text = "Eircode";
             // 
             // pnlUpdateRegisteredMember
             // 
@@ -259,10 +123,10 @@
             this.pnlUpdateRegisteredMember.Controls.Add(this.btnSearchDeregisteredMember);
             this.pnlUpdateRegisteredMember.Controls.Add(this.txtSearchDegisterMemberID);
             this.pnlUpdateRegisteredMember.Controls.Add(this.lblDegesterMemerID);
-            this.pnlUpdateRegisteredMember.Location = new System.Drawing.Point(220, 84);
+            this.pnlUpdateRegisteredMember.Location = new System.Drawing.Point(72, 76);
             this.pnlUpdateRegisteredMember.Name = "pnlUpdateRegisteredMember";
-            this.pnlUpdateRegisteredMember.Size = new System.Drawing.Size(457, 40);
-            this.pnlUpdateRegisteredMember.TabIndex = 143;
+            this.pnlUpdateRegisteredMember.Size = new System.Drawing.Size(441, 36);
+            this.pnlUpdateRegisteredMember.TabIndex = 145;
             // 
             // btnSearchDeregisteredMember
             // 
@@ -273,14 +137,15 @@
             this.btnSearchDeregisteredMember.TabIndex = 94;
             this.btnSearchDeregisteredMember.Text = "SEARCH";
             this.btnSearchDeregisteredMember.UseVisualStyleBackColor = false;
+            this.btnSearchDeregisteredMember.Click += new System.EventHandler(this.btnSearchDeregisteredMember_Click_1);
             // 
             // txtSearchDegisterMemberID
             // 
             this.txtSearchDegisterMemberID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchDegisterMemberID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearchDegisterMemberID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchDegisterMemberID.Location = new System.Drawing.Point(151, 6);
-            this.txtSearchDegisterMemberID.MaxLength = 7;
+            this.txtSearchDegisterMemberID.Location = new System.Drawing.Point(170, 6);
+            this.txtSearchDegisterMemberID.MaxLength = 5;
             this.txtSearchDegisterMemberID.Name = "txtSearchDegisterMemberID";
             this.txtSearchDegisterMemberID.Size = new System.Drawing.Size(122, 27);
             this.txtSearchDegisterMemberID.TabIndex = 96;
@@ -300,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(826, 499);
+            this.ClientSize = new System.Drawing.Size(585, 457);
             this.Controls.Add(this.pnlUpdateRegisteredMember);
             this.Controls.Add(this.btnDegeristerMemberConfirm);
             this.Controls.Add(this.grpDeregisterMember);
@@ -331,18 +196,7 @@
         private System.Windows.Forms.Label lblDeregisterMember;
         private System.Windows.Forms.GroupBox grpDeregisterMember;
         private System.Windows.Forms.Button btnDegeristerMemberConfirm;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label lblForename;
-        private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.Label lblEircode;
-        private System.Windows.Forms.Label lblCounty;
-        private System.Windows.Forms.Label lblPhoneValue;
-        private System.Windows.Forms.Label lblCountyValue;
-        private System.Windows.Forms.Label lblForenameValue;
-        private System.Windows.Forms.Label lblEmailValue;
-        private System.Windows.Forms.Label lblSurnameValue;
-        private System.Windows.Forms.Label lblEircodelValue;
+        private System.Windows.Forms.Label lblDeregisterMemberDetails;
         private System.Windows.Forms.Panel pnlUpdateRegisteredMember;
         private System.Windows.Forms.Button btnSearchDeregisteredMember;
         private System.Windows.Forms.TextBox txtSearchDegisterMemberID;

@@ -46,7 +46,10 @@ namespace LibrarySYS
                 return;
             }
 
+            dgvReservedBooks.Visible = true;
+            btnConfirm.Visible = true;
             LoadReservedBooks(list);
+
         }
         private void LoadReservedBooks(List<Loan> loans)
         {

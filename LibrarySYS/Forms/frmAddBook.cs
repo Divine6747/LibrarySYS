@@ -27,28 +27,30 @@ namespace LibrarySYS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
-
-            bool valid = ValidateBook.ValidateBookData(
+            //Validate with error message
+            if (!ValidateBook.ValidateBookData(
                 txtISBN.Text,
                 txtTitle.Text,
                 txtAuthor.Text,
                 dtpPublication.Text,
                 cboGenre,
-                txtDescription.Text
-            );
-
-            if (!valid)
+                txtDescription.Text,
+                out string errorMessage))
             {
-                MessageBox.Show("Validation Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            Genre genreEnum = (Genre)Enum.Parse(typeof(Genre), cboGenre.SelectedIndex.ToString());
+            // Get selected genre - FIXED: Get by name, not index
+            string selectedGenreName = cboGenre.SelectedItem.ToString();
+            Genre genreEnum = (Genre)Enum.Parse(typeof(Genre), selectedGenreName);
+
+            // Generate book ID
             string bookId = IdGenerator.GenerateBookId();
 
             Book newBook = new Book(
-                bookId,
+                bookId, // Pass the generated ID
                 txtISBN.Text,
                 txtTitle.Text,
                 txtAuthor.Text,
@@ -59,14 +61,16 @@ namespace LibrarySYS
             );
 
             _bookManager.AddBook(newBook);
-            MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            MessageBox.Show($"Book '{newBook.Title}' added successfully with ID: {newBook.BookId}",
+                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Clear form
             txtISBN.Clear();
             txtTitle.Clear();
             txtAuthor.Clear();
             cboGenre.SelectedIndex = -1;
             dtpPublication.Value = DateTime.Now;
-            txtDescription.Clear();           
+            txtDescription.Clear();
         }
     }
 }

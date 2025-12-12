@@ -85,7 +85,7 @@ namespace LibrarySYS
 
             _memberManager.UpdateMember(_currentMember);
 
-            MessageBox.Show("Member updated successfully.");
+            MessageBox.Show($"Member details has been updated successfully. \n\nUpdated Member Details: \n\nForename:   {forename}\tSurname:   {surname}\n\nEircode:   {eircode}\tEmial:   {email}\n\nPhone:   {phone}\tCounty:   {town} ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             ClearForm();
         }

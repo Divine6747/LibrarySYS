@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Book.cs" />
-    <Compile Include="Entities\ValidateBook.cs" />
-    <Compile Include="Entities\ValidateMember.cs" />
     <Compile Include="Enums\County.cs" />
     <Compile Include="Enums\Genre.cs" />
     <Compile Include="Forms\frmCollectBook.cs">
@@ -111,7 +109,7 @@
     <Compile Include="Forms\frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generator\IdGenerator.cs" />
+    <Compile Include="IdGenerator\IdGenerator.cs" />
     <Compile Include="Interfaces\IBookManager.cs" />
     <Compile Include="Interfaces\ILoanManager.cs" />
     <Compile Include="Interfaces\IMemberManager.cs" />
@@ -122,6 +120,8 @@
     <Compile Include="Managers\MemberManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validations\ValidateBook.cs" />
+    <Compile Include="Validations\ValidateMember.cs" />
     <EmbeddedResource Include="Forms\frmCollectBook.resx">
       <DependentUpon>frmCollectBook.cs</DependentUpon>
     </EmbeddedResource>

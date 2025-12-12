@@ -60,7 +60,6 @@ namespace LibrarySYS.Managers
             }
             return null;
         }
-
         public List<Member> GetAllMembers()
         {
             return _members;

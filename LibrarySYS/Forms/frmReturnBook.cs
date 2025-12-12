@@ -59,7 +59,30 @@ namespace LibrarySYS
             }
         }
 
-        private void dgvLoanedBooks_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnLoanIDSearch_Click(object sender, EventArgs e)
+        {
+            string loanId = txtLoanId.Text.Trim();
+
+            if (string.IsNullOrEmpty(loanId))
+            {
+                MessageBox.Show("Enter a Loan ID.");
+                return;
+            }
+
+            Loan loan = _loanManager.GetLoanById(loanId);
+
+            if (loan == null || loan.DateCollected == null)
+            {
+                MessageBox.Show("No collected books found for this Loan ID.");
+                return;
+            }
+
+            _loansToReturn = _loanManager.GetLoansByReservationId(loan.ReservationId);
+            btnConfirm.Visible = true;
+            LoadLoansToGrid();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             if (_loansToReturn.Count == 0)
             {

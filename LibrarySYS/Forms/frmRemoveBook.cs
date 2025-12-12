@@ -3,6 +3,7 @@ using LibrarySYS.Enums;
 using LibrarySYS.Managers;
 using System;
 using System.Drawing;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 namespace LibrarySYS
@@ -24,11 +25,39 @@ namespace LibrarySYS
 
         private void btnRemoveBook_Click(object sender, EventArgs e)
         {
-            string bookId = txtSearchUpdateBookID.Text.Trim();
+            if (_currentBook == null)
+            {
+                MessageBox.Show("Please search for a book first.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to set this book to inactive?",
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                _bookManager.SetAvailability(_currentBook.BookId, false);
+                MessageBox.Show($"Book '{_currentBook.Title}' has been set to inactive.",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtSearchRemoveBookID.Clear();
+                grpRemoveBook.Visible = false;
+                btnRemoveBookConfirm.Visible = false;
+                _currentBook = null;
+            }
+        }
+
+        private void btnSearchBookId_Click(object sender, EventArgs e)
+        {
+            string bookId = txtSearchRemoveBookID.Text.Trim();
 
             if (string.IsNullOrEmpty(bookId))
             {
-                MessageBox.Show("Enter a Book ID.");
+                MessageBox.Show("Please enter a Book ID to search.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -36,29 +65,27 @@ namespace LibrarySYS
 
             if (_currentBook == null)
             {
-                MessageBox.Show("Book not found.");
-                return;
+                MessageBox.Show("Book not found.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                grpRemoveBook.Visible = false;
+                btnRemoveBookConfirm.Visible = false;
             }
+            else
+            {
+                string bookDetails = "Book ID:  " + _currentBook.BookId + "  \t\t  " +
+                                     "ISBN:  " + _currentBook.ISBN + "\n\n" +
+                                     "Title:  " + _currentBook.Title + "  \t\t  " +
+                                     "Author:  " + _currentBook.Author + "\n\n" +
+                                     "Publication Date:  " + _currentBook.Publication.ToShortDateString() + "  \t" +
+                                     "Genre:  " + _currentBook.Genre + "\n\n" +
+                                     "Description:  " + _currentBook.Description + "\n\n" +
+                                     "Status:  " + (_currentBook.IsAvailable ? "Available" : "Not Available");
 
-            // Fill fields
-            txtSearchUpdateBookID.Text = _currentBook.BookId;
-            txtUpdateISBN.Text = _currentBook.ISBN;
-            txtUpdateTitle.Text = _currentBook.Title;
-            txtUpdateBookAuthor.Text = _currentBook.Author;
-            dtpPublication.Value = _currentBook.Publication;
-
-            cboGenre.DataSource = Enum.GetValues(typeof(Genre));
-            cboGenre.SelectedItem = _currentBook.Genre;
-
-            txtDescription.Text = _currentBook.Description;
-
-            grpUpdateBook.Visible = true;
-            btnRemoveBook.Visible = true;
-        }
-
-        private void btnSearchBookId_Click(object sender, EventArgs e)
-        {
-
+                lblBookDetails.Font = new Font("Century Gothic", 12, FontStyle.Regular);
+                lblBookDetails.Text = bookDetails;
+                grpRemoveBook.Visible = true;
+                btnRemoveBookConfirm.Visible = true;
+            }
         }
     }
 }

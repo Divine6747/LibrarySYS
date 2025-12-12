@@ -79,7 +79,8 @@ namespace LibrarySYS
             string bookId = txtSearchUpdateMemberID.Text.Trim();
             if (string.IsNullOrWhiteSpace(bookId))
             {
-                MessageBox.Show("Please enter a Book ID to search.");
+                MessageBox.Show("Please enter a Book ID to search.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -87,7 +88,8 @@ namespace LibrarySYS
 
             if (_currentBook == null)
             {
-                MessageBox.Show("Book not found.");
+                MessageBox.Show($"Book with ID '{bookId}' not found.", "Not Found",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 grpUpdateBook.Visible = false;
                 btnSubmitUpdate.Visible = false;
             }
@@ -103,6 +105,7 @@ namespace LibrarySYS
 
                 grpUpdateBook.Visible = true;
                 btnSubmitUpdate.Visible = true;
+                txtSearchUpdateMemberID.Focus();
             }
         }
     }

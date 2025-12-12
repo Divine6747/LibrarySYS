@@ -136,7 +136,7 @@
             this.txtSearchUpdateMemberID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearchUpdateMemberID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchUpdateMemberID.Location = new System.Drawing.Point(149, 8);
-            this.txtSearchUpdateMemberID.MaxLength = 7;
+            this.txtSearchUpdateMemberID.MaxLength = 5;
             this.txtSearchUpdateMemberID.Name = "txtSearchUpdateMemberID";
             this.txtSearchUpdateMemberID.Size = new System.Drawing.Size(159, 27);
             this.txtSearchUpdateMemberID.TabIndex = 96;

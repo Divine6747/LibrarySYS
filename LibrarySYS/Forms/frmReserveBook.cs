@@ -27,9 +27,6 @@ namespace LibrarySYS
 
             dgvSearchResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvResCart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            dgvSearchResults.AllowUserToAddRows = false;
-            dgvResCart.AllowUserToAddRows = false;
         }
         private void mnuBack_Click(object sender, EventArgs e)
         {
@@ -61,6 +58,9 @@ namespace LibrarySYS
                 "Email: " + _currentMember.Email;
 
             grpMemberInfo.Visible = true;
+            lblTitle.Visible = true;
+            txtTitle.Visible = true;
+            btnSearchByTitle.Visible = true;
         }
 
         private void btnSearchByTitle_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace LibrarySYS
                 MessageBox.Show("No books found.");
                 return;
             }
-
+            dgvSearchResults.Visible = true;
             LoadSearchResults(results);
         }
 
@@ -188,7 +188,8 @@ namespace LibrarySYS
                 MessageBox.Show("This book is already in the cart.");
                 return;
             }
-
+            dgvResCart.Visible = true;
+            btnCheckOut.Visible = true;
             _cartBooks.Add(selectedBook);
             RefreshCart();
         }
